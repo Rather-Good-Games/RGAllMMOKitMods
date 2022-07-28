@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - PlayerTag
+  - MonsterTag
+  - NpcTag
+  - ItemDropTag
+  - BuildingTag
+  - HarvestableTag
+  - VehicleTag
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Character
+  - ItemDrop
+  - MiniMap
+  - WarpPortalOrSafeArea
+  - DamageEntity
+  - Building
+  - Harvestable
+  - CharacterUI
+  - Ragdoll
+  - Player
+  - Monster
+  - Npc
+  - Vehicle
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Ground
+    uniqueID: 794791751
+    locked: 0
+  - name: Character
+    uniqueID: 3557845381
+    locked: 0

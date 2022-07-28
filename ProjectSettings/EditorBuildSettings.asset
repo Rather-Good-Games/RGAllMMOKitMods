@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/RatherGood/MMOKit/_ALLRGMods/Scenes/00Init_Shooter_AllModsRG.unity
+    guid: 25176fbb32f804447b62a2bdfecce7e3
+  - enabled: 1
+    path: Assets/RatherGood/MMOKit/_ALLRGMods/Scenes/Map001_AllRGMods.unity
+    guid: 5be31d06097a5ff44b19fd519454429a
+  - enabled: 1
+    path: Assets/UnityMultiplayerARPG/Demo/Scenes/00Init.unity
+    guid: 83e4631ec3bd0bb43ab4e9207f05404d
+  - enabled: 1
+    path: Assets/UnityMultiplayerARPG/DemoSurvival/Scenes/00Init_Survival.unity
+    guid: 987364e67e58dad42a1c306e8aa86e15
+  - enabled: 1
+    path: Assets/UnityMultiplayerARPG/DemoShooter/Scenes/00Init_Shooter.unity
+    guid: 0439ba7169468e34384f0d62bd7d359f
+  - enabled: 1
+    path: Assets/UnityMultiplayerARPG/Demo2D/Scenes/00Init_2D.unity
+    guid: e9a7822cb00ed184192a156c9d70b0c8
+  - enabled: 1
+    path: Assets/UnityMultiplayerARPG/MMO/Demo/Scenes/00Init_MMO.unity
+    guid: 056f7c73b6de60d47abb53ccc8a70d6a
+  - enabled: 1
+    path: Assets/UnityMultiplayerARPG/MMO/Demo/Scenes/00Init_MMO_WebSocket.unity
+    guid: 5f74ff16ef0263e478fb2e3ecc02f1f9
+  - enabled: 1
+    path: Assets/UnityMultiplayerARPG/MMO/Demo2D/Scenes/00Init_MMO_2D.unity
+    guid: 58c0577036f189f4abe821d06b37d020
+  - enabled: 1
+    path: Assets/UnityMultiplayerARPG/Demo/Scenes/01Home.unity
+    guid: ade6fa5747c04c54b99f067a5ed7f2f1
+  - enabled: 1
+    path: Assets/UnityMultiplayerARPG/MMO/Demo/Scenes/01Home_MMO.unity
+    guid: d529c814bb9fcd14289ac4141b27e951
+  - enabled: 1
+    path: Assets/UnityMultiplayerARPG/Demo2D/Scenes/01Home_2D.unity
+    guid: 91fd2dda25392fb46b1aaf86a01e8f2c
+  - enabled: 1
+    path: Assets/UnityMultiplayerARPG/MMO/Demo2D/Scenes/01Home_MMO_2D.unity
+    guid: c72cf1eb6d846864fb28e9ae741876a3
+  - enabled: 1
+    path: Assets/UnityMultiplayerARPG/Demo/Scenes/Map001.unity
+    guid: 5ff0e5fbbdc3a214d87be31915d46cd5
+  - enabled: 1
+    path: Assets/UnityMultiplayerARPG/Demo/Scenes/Map002.unity
+    guid: 2621c3c93d9bae14ab8df78426137c00
+  - enabled: 1
+    path: Assets/UnityMultiplayerARPG/DemoGuildWar/Scenes/Map_GuildWar.unity
+    guid: 8334feb320588b54cb3cff0e1af0ff76
+  - enabled: 1
+    path: Assets/UnityMultiplayerARPG/Demo2D/Scenes/Map001_2D.unity
+    guid: 824d6886da3050741a3a6f8b1047681f
+  - enabled: 1
+    path: Assets/UnityMultiplayerARPG/Demo2D/Scenes/Map002_2D.unity
+    guid: 29a45180a2ba0d74c94bc7361da060cc
+  m_configObjects: {}
