@@ -8,7 +8,7 @@ namespace MultiplayerARPG
     {
 
         [Header("RGModTest")]
-        public bool RGDebugStartedFollowEnemy;
+        //public bool RGDebugStartedFollowEnemy;
 
         public bool isSheithedLocal;
 
@@ -21,6 +21,12 @@ namespace MultiplayerARPG
 
         public override void EntityStart()
         {
+
+            //adjsut some stuff
+            maxDistanceFromSpawnPoint = 50f;
+            followTargetDuration = 60f;
+
+
             EquipWeapons equipWeapons = new EquipWeapons();
             equipWeapons.rightHand = CharacterItem.Create(RightHandItem);
             Entity.EquipWeapons = equipWeapons;
@@ -50,13 +56,88 @@ namespace MultiplayerARPG
 
         }
 
-        public override void EntityUpdate()
+        //public override void EntityUpdate()
+        //{
+
+        //    isSheithedLocal = true;
+
+        //    if (!Entity.IsServer || Entity.Identity.CountSubscribers() == 0 || CharacterDatabase == null)
+        //        return;
+
+        //    if (Entity.IsDead())
+        //    {
+        //        Entity.StopMove();
+        //        Entity.SetTargetEntity(null);
+        //        return;
+        //    }
+
+        //    float deltaTime = Time.unscaledDeltaTime;
+
+        //    Vector3 currentPosition = Entity.MovementTransform.position;
+        //    if (Entity.Summoner != null)
+        //    {
+        //        if (!UpdateAttackEnemy(deltaTime, currentPosition))
+        //        {
+        //            UpdateEnemyFindingActivity(deltaTime);
+
+        //            if (Vector3.Distance(currentPosition, Entity.Summoner.CacheTransform.position) > CurrentGameInstance.minFollowSummonerDistance)
+        //            {
+        //                // Follow summoner
+        //                FollowSummoner();
+        //                startedAggressive = IsAggressiveWhileSummonerIdle();
+        //            }
+        //            else
+        //            {
+        //                UpdateWanderDestinationRandomingActivity(deltaTime);
+        //            }
+        //            startedFollowEnemy = false;
+        //        }
+        //        else
+        //        {
+        //            isSheithedLocal = false;
+        //        }
+        //    }
+        //    else
+        //    {
+        //        if (Entity.IsInSafeArea)
+        //        {
+        //            UpdateSafeAreaExitingActivity(deltaTime);
+        //            previousIsInSafeArea = true;
+        //            startedFollowEnemy = false;
+        //            return;
+        //        }
+        //        previousIsInSafeArea = false;
+
+        //        if (!UpdateAttackEnemy(deltaTime, currentPosition))
+        //        {
+        //            UpdateEnemyFindingActivity(deltaTime);
+        //            UpdateWanderDestinationRandomingActivity(deltaTime);
+        //        }
+        //        else
+        //        {
+        //            isSheithedLocal = false;
+        //        }
+        //    }
+        //    SheithUpdate(isSheithedLocal);
+        //}
+
+
+        void SheithUpdate(bool sheith)
         {
 
-            isSheithedLocal = true;
+            if (sheith != Entity.IsSheathed)
+            {
+                Entity.CallServerSheathWeapon(sheith);
 
+            }
+
+        }
+
+        public override void EntityUpdate()
+        {
             if (!Entity.IsServer || Entity.Identity.CountSubscribers() == 0 || CharacterDatabase == null)
                 return;
+
 
             if (Entity.IsDead())
             {
@@ -65,7 +146,19 @@ namespace MultiplayerARPG
                 return;
             }
 
+            isSheithedLocal = true;
+
             float deltaTime = Time.unscaledDeltaTime;
+            if (pauseCountdown > 0f)
+            {
+                pauseCountdown -= deltaTime;
+                if (pauseCountdown <= 0f)
+                    pauseCountdown = 0f;
+                Entity.StopMove();
+                return;
+            }
+
+            Entity.SetSmoothTurnSpeed(turnSmoothSpeed);
 
             Vector3 currentPosition = Entity.MovementTransform.position;
             if (Entity.Summoner != null)
@@ -95,64 +188,62 @@ namespace MultiplayerARPG
             {
                 if (Entity.IsInSafeArea)
                 {
-                    UpdateSafeAreaExitingActivity(deltaTime);
-                    previousIsInSafeArea = true;
+                    UpdateExitFromSafeAreaActivity(deltaTime);
                     startedFollowEnemy = false;
                     return;
                 }
-                previousIsInSafeArea = false;
+                previouslyExitFromSafeArea = false;
+
+                if (maxDistanceFromSpawnPoint > 0f && Vector3.Distance(Entity.SpawnPosition, currentPosition) >= maxDistanceFromSpawnPoint)
+                {
+                    UpdateMoveBackToSpawnPointActivity(deltaTime);
+                    startedFollowEnemy = false;
+                    return;
+                }
+                previouslyMoveBackToSpawnPoint = false;
 
                 if (!UpdateAttackEnemy(deltaTime, currentPosition))
                 {
                     UpdateEnemyFindingActivity(deltaTime);
                     UpdateWanderDestinationRandomingActivity(deltaTime);
+                    startedFollowEnemy = false;
                 }
                 else
                 {
                     isSheithedLocal = false;
                 }
-
-
             }
-
 
             SheithUpdate(isSheithedLocal);
-
         }
-
-
-        void SheithUpdate(bool sheith)
-        {
-
-            if (sheith != Entity.IsSheathed)
-            {
-                Entity.CallServerSheathWeapon(sheith);
-
-                //Entity.IsSheathed = sheith;
-            }
-
-        }
-
 
         #region OldStuff
 
 
+        [SerializeField]
+        protected float turnSmoothSpeed = 10f;
         [Tooltip("Min random delay for next wander")]
         public float randomWanderDelayMin = 2f;
         [Tooltip("Max random delay for next wander")]
         public float randomWanderDelayMax = 5f;
         [Tooltip("Random distance around spawn position to wander")]
         public float randomWanderDistance = 2f;
+        [Tooltip("Max distance it can move from spawn point, if it's <= 0, it will be determined that it is no limit")]
+        public float maxDistanceFromSpawnPoint = 5f;
         [Tooltip("Delay before find enemy again")]
         public float findEnemyDelay = 1f;
         [Tooltip("If following target time reached this value it will stop following target")]
         public float followTargetDuration = 5f;
         [Tooltip("Turn to enemy speed")]
         public float turnToEnemySpeed = 800f;
+        [Tooltip("Duration to pausing after received damage")]
+        public float miniStunDuration = 0f;
         [Tooltip("If this is TRUE, monster will attacks buildings")]
         public bool isAttackBuilding = false;
         [Tooltip("If this is TRUE, monster will attacks targets while its summoner still idle")]
         public bool isAggressiveWhileSummonerIdle = false;
+        [Tooltip("Delay before it can switch target again")]
+        public float switchTargetDelay = 3;
 
         protected readonly List<BaseCharacterEntity> enemies = new List<BaseCharacterEntity>();
         protected bool startedAggressive;
@@ -168,14 +259,75 @@ namespace MultiplayerARPG
         protected bool alreadySetActionState;
         protected bool isLeftHandAttacking;
         protected float lastSetDestinationTime;
-        protected bool previousIsInSafeArea;
+        protected bool previouslyExitFromSafeArea;
+        protected bool previouslyMoveBackToSpawnPoint;
+        protected float pauseCountdown;
+        protected float lastSwitchTargetTime;
 
         public bool IsAggressiveWhileSummonerIdle()
         {
             return (isAggressiveWhileSummonerIdle || Entity.Characteristic == MonsterCharacteristic.Aggressive) && Entity.Characteristic != MonsterCharacteristic.NoHarm;
         }
 
-      
+        public override void EntityAwake()
+        {
+            base.EntityAwake();
+            Entity.onNotifyEnemySpotted += Entity_onNotifyEnemySpotted;
+            Entity.onNotifyEnemySpottedByAlly += Entity_onNotifyEnemySpottedByAlly;
+            Entity.onReceivedDamage += Entity_onReceivedDamage;
+        }
+
+        public override void EntityOnDestroy()
+        {
+            base.EntityOnDestroy();
+            Entity.onNotifyEnemySpotted -= Entity_onNotifyEnemySpotted;
+            Entity.onNotifyEnemySpottedByAlly -= Entity_onNotifyEnemySpottedByAlly;
+            Entity.onReceivedDamage -= Entity_onReceivedDamage;
+        }
+
+        private void Entity_onNotifyEnemySpotted(BaseCharacterEntity enemy)
+        {
+            if (Entity.Characteristic != MonsterCharacteristic.Assist)
+                return;
+            // Warn that this character received damage to nearby characters
+            List<BaseCharacterEntity> foundCharacters = Entity.FindAliveCharacters<BaseCharacterEntity>(CharacterDatabase.VisualRange, true, false, false);
+            if (foundCharacters == null || foundCharacters.Count == 0) return;
+            foreach (BaseCharacterEntity foundCharacter in foundCharacters)
+            {
+                foundCharacter.NotifyEnemySpottedByAlly(Entity, enemy);
+            }
+        }
+
+        private void Entity_onNotifyEnemySpottedByAlly(BaseCharacterEntity ally, BaseCharacterEntity enemy)
+        {
+            if ((Entity.Summoner != null && Entity.Summoner == ally) ||
+                Entity.Characteristic == MonsterCharacteristic.Assist)
+                Entity.SetAttackTarget(enemy);
+        }
+
+        private void Entity_onReceivedDamage(HitBoxPosition position, Vector3 fromPosition, IGameEntity attacker, CombatAmountType combatAmountType, int totalDamage, CharacterItem weapon, BaseSkill skill, short skillLevel, CharacterBuff buff)
+        {
+            BaseCharacterEntity attackerCharacter = attacker as BaseCharacterEntity;
+            if (attackerCharacter == null)
+                return;
+            // If character is not dead, try to attack
+            if (!Entity.IsDead())
+            {
+                if (Entity.GetTargetEntity() == null)
+                {
+                    // If no target enemy, set target enemy as attacker
+                    Entity.SetAttackTarget(attackerCharacter);
+                }
+                else if (attackerCharacter != Entity.GetTargetEntity() && Random.value > 0.5f && Time.unscaledTime - lastSwitchTargetTime > switchTargetDelay)
+                {
+                    // Random 50% to change target when receive damage from anyone
+                    lastSwitchTargetTime = Time.unscaledTime;
+                    Entity.SetAttackTarget(attackerCharacter);
+                }
+            }
+        }
+
+
 
         protected virtual void UpdateEnemyFindingActivity(float deltaTime)
         {
@@ -191,14 +343,27 @@ namespace MultiplayerARPG
             }
         }
 
-        protected virtual void UpdateSafeAreaExitingActivity(float deltaTime)
+        protected virtual void UpdateExitFromSafeAreaActivity(float deltaTime)
         {
             randomedWanderElasped += deltaTime;
-            // If monster is in safe area, wander to another place
-            if (!previousIsInSafeArea || randomedWanderElasped >= randomedWanderDelay)
+            if (!previouslyExitFromSafeArea || randomedWanderElasped >= randomedWanderDelay)
             {
                 randomedWanderElasped = 0f;
                 RandomWanderDestination();
+                previouslyExitFromSafeArea = true;
+                return;
+            }
+        }
+
+        protected virtual void UpdateMoveBackToSpawnPointActivity(float deltaTime)
+        {
+            randomedWanderElasped += deltaTime;
+            if (!previouslyMoveBackToSpawnPoint || randomedWanderElasped >= randomedWanderDelay)
+            {
+                randomedWanderElasped = 0f;
+                RandomWanderDestination();
+                previouslyMoveBackToSpawnPoint = true;
+                return;
             }
         }
 
@@ -513,8 +678,8 @@ namespace MultiplayerARPG
             // Target is far from controlling entity, try overlap the entity
             return Entity.FindPhysicFunctions.IsGameEntityInDistance(entity, measuringPosition, distance, false);
         }
-        #endregion OldStuff
-
-
     }
+
+    #endregion OldStuff
+
 }

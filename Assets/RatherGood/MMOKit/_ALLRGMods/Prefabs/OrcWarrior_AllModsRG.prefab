@@ -11141,91 +11141,6 @@ MonoBehaviour:
     extendDuration: 100
     audioClips: []
   SheathAnimations:
-  - SheathweaponType: {fileID: 11400000, guid: 29d4ec088d34fd947821863e5d87b7a8, type: 2}
-    rightHandSheathAnimations:
-      state:
-        clip: {fileID: 0}
-        avatarMask: {fileID: 31900000, guid: 46c4b7ef94e138345b701a79ad0e62c2, type: 2}
-        animSpeedRate: 0
-        transitionDuration: 0
-        isAdditive: 0
-        applyFootIk: 0
-        applyPlayableIk: 0
-      triggerDurationRates: []
-      durationType: 0
-      fixedDuration: 0
-      extendDuration: 0
-      audioClips: []
-    rightHandUnSheathAnimations:
-      state:
-        clip: {fileID: 0}
-        avatarMask: {fileID: 31900000, guid: 46c4b7ef94e138345b701a79ad0e62c2, type: 2}
-        animSpeedRate: 0
-        transitionDuration: 0
-        isAdditive: 0
-        applyFootIk: 0
-        applyPlayableIk: 0
-      triggerDurationRates: []
-      durationType: 0
-      fixedDuration: 0
-      extendDuration: 0
-      audioClips: []
-    leftHandSheathAnimations:
-      state:
-        clip: {fileID: 0}
-        avatarMask: {fileID: 31900000, guid: 46c4b7ef94e138345b701a79ad0e62c2, type: 2}
-        animSpeedRate: 0
-        transitionDuration: 0
-        isAdditive: 0
-        applyFootIk: 0
-        applyPlayableIk: 0
-      triggerDurationRates: []
-      durationType: 0
-      fixedDuration: 0
-      extendDuration: 0
-      audioClips: []
-    leftHandUnSheathAnimations:
-      state:
-        clip: {fileID: 0}
-        avatarMask: {fileID: 31900000, guid: 46c4b7ef94e138345b701a79ad0e62c2, type: 2}
-        animSpeedRate: 0
-        transitionDuration: 0
-        isAdditive: 0
-        applyFootIk: 0
-        applyPlayableIk: 0
-      triggerDurationRates: []
-      durationType: 0
-      fixedDuration: 0
-      extendDuration: 0
-      audioClips: []
-    dualWeildSheathAnimations:
-      state:
-        clip: {fileID: 0}
-        avatarMask: {fileID: 31900000, guid: 46c4b7ef94e138345b701a79ad0e62c2, type: 2}
-        animSpeedRate: 0
-        transitionDuration: 0
-        isAdditive: 0
-        applyFootIk: 0
-        applyPlayableIk: 0
-      triggerDurationRates: []
-      durationType: 0
-      fixedDuration: 0
-      extendDuration: 0
-      audioClips: []
-    dualWeildUnSheathAnimations:
-      state:
-        clip: {fileID: 0}
-        avatarMask: {fileID: 31900000, guid: 46c4b7ef94e138345b701a79ad0e62c2, type: 2}
-        animSpeedRate: 0
-        transitionDuration: 0
-        isAdditive: 0
-        applyFootIk: 0
-        applyPlayableIk: 0
-      triggerDurationRates: []
-      durationType: 0
-      fixedDuration: 0
-      extendDuration: 0
-      audioClips: []
   - SheathweaponType: {fileID: 11400000, guid: d433f880a1c9d6149bcbf3b5676ea6a0, type: 2}
     rightHandSheathAnimations:
       state:
@@ -11317,24 +11232,24 @@ MonoBehaviour:
       fixedDuration: 0
       extendDuration: 0
       audioClips: []
-  - SheathweaponType: {fileID: 11400000, guid: a33855f9c9112894fbf4fb803ab001da, type: 2}
+  - SheathweaponType: {fileID: 11400000, guid: 29d4ec088d34fd947821863e5d87b7a8, type: 2}
     rightHandSheathAnimations:
       state:
-        clip: {fileID: 7400000, guid: 6be663032da5d9b499dcdefa167eb490, type: 3}
-        avatarMask: {fileID: 0}
+        clip: {fileID: 0}
+        avatarMask: {fileID: 31900000, guid: 46c4b7ef94e138345b701a79ad0e62c2, type: 2}
         animSpeedRate: 0
         transitionDuration: 0
         isAdditive: 0
         applyFootIk: 0
-        applyPlayableIk: 1
+        applyPlayableIk: 0
       triggerDurationRates: []
       durationType: 0
       fixedDuration: 0
-      extendDuration: 100
+      extendDuration: 0
       audioClips: []
     rightHandUnSheathAnimations:
       state:
-        clip: {fileID: 7400000, guid: f95c96d798bb3b14c8087b88ad5c9f5d, type: 3}
+        clip: {fileID: 0}
         avatarMask: {fileID: 31900000, guid: 46c4b7ef94e138345b701a79ad0e62c2, type: 2}
         animSpeedRate: 0
         transitionDuration: 0
@@ -11348,7 +11263,7 @@ MonoBehaviour:
       audioClips: []
     leftHandSheathAnimations:
       state:
-        clip: {fileID: 7400000, guid: 4638ca7fe98a28044a1dd9205af58dea, type: 3}
+        clip: {fileID: 0}
         avatarMask: {fileID: 31900000, guid: 46c4b7ef94e138345b701a79ad0e62c2, type: 2}
         animSpeedRate: 0
         transitionDuration: 0
@@ -11362,7 +11277,94 @@ MonoBehaviour:
       audioClips: []
     leftHandUnSheathAnimations:
       state:
-        clip: {fileID: 7400000, guid: f95c96d798bb3b14c8087b88ad5c9f5d, type: 3}
+        clip: {fileID: 0}
+        avatarMask: {fileID: 31900000, guid: 46c4b7ef94e138345b701a79ad0e62c2, type: 2}
+        animSpeedRate: 0
+        transitionDuration: 0
+        isAdditive: 0
+        applyFootIk: 0
+        applyPlayableIk: 0
+      triggerDurationRates: []
+      durationType: 0
+      fixedDuration: 0
+      extendDuration: 0
+      audioClips: []
+    dualWeildSheathAnimations:
+      state:
+        clip: {fileID: 0}
+        avatarMask: {fileID: 31900000, guid: 46c4b7ef94e138345b701a79ad0e62c2, type: 2}
+        animSpeedRate: 0
+        transitionDuration: 0
+        isAdditive: 0
+        applyFootIk: 0
+        applyPlayableIk: 0
+      triggerDurationRates: []
+      durationType: 0
+      fixedDuration: 0
+      extendDuration: 0
+      audioClips: []
+    dualWeildUnSheathAnimations:
+      state:
+        clip: {fileID: 0}
+        avatarMask: {fileID: 31900000, guid: 46c4b7ef94e138345b701a79ad0e62c2, type: 2}
+        animSpeedRate: 0
+        transitionDuration: 0
+        isAdditive: 0
+        applyFootIk: 0
+        applyPlayableIk: 0
+      triggerDurationRates: []
+      durationType: 0
+      fixedDuration: 0
+      extendDuration: 0
+      audioClips: []
+  - SheathweaponType: {fileID: 11400000, guid: a33855f9c9112894fbf4fb803ab001da, type: 2}
+    rightHandSheathAnimations:
+      state:
+        clip: {fileID: 7400000, guid: 7dc4b6c333abbab4390b26e7a4f01493, type: 3}
+        avatarMask: {fileID: 31900000, guid: 46c4b7ef94e138345b701a79ad0e62c2, type: 2}
+        animSpeedRate: 0
+        transitionDuration: 0
+        isAdditive: 0
+        applyFootIk: 0
+        applyPlayableIk: 0
+      triggerDurationRates: []
+      durationType: 0
+      fixedDuration: 0
+      extendDuration: 0
+      audioClips:
+      - {fileID: 0}
+    rightHandUnSheathAnimations:
+      state:
+        clip: {fileID: 7400000, guid: 64b826e2cfd53fe44925f54f3af986ae, type: 3}
+        avatarMask: {fileID: 31900000, guid: 46c4b7ef94e138345b701a79ad0e62c2, type: 2}
+        animSpeedRate: 0
+        transitionDuration: 0
+        isAdditive: 0
+        applyFootIk: 0
+        applyPlayableIk: 0
+      triggerDurationRates: []
+      durationType: 0
+      fixedDuration: 0
+      extendDuration: 0
+      audioClips:
+      - {fileID: 0}
+    leftHandSheathAnimations:
+      state:
+        clip: {fileID: 7400000, guid: 7dc4b6c333abbab4390b26e7a4f01493, type: 3}
+        avatarMask: {fileID: 31900000, guid: 46c4b7ef94e138345b701a79ad0e62c2, type: 2}
+        animSpeedRate: 0
+        transitionDuration: 0
+        isAdditive: 0
+        applyFootIk: 0
+        applyPlayableIk: 0
+      triggerDurationRates: []
+      durationType: 0
+      fixedDuration: 0
+      extendDuration: 0
+      audioClips: []
+    leftHandUnSheathAnimations:
+      state:
+        clip: {fileID: 7400000, guid: 64b826e2cfd53fe44925f54f3af986ae, type: 3}
         avatarMask: {fileID: 31900000, guid: 46c4b7ef94e138345b701a79ad0e62c2, type: 2}
         animSpeedRate: 0
         transitionDuration: 0
@@ -12268,18 +12270,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ecbdb998533db547a6980b01bee5917, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RGDebugStartedFollowEnemy: 0
   isSheithedLocal: 0
   RightHandItem: {fileID: 11400000, guid: ccd7bf913c6aa3c44b31bef68436a2d1, type: 2}
   startItems: []
+  turnSmoothSpeed: 10
   randomWanderDelayMin: 2
   randomWanderDelayMax: 5
   randomWanderDistance: 2
+  maxDistanceFromSpawnPoint: 5
   findEnemyDelay: 1
   followTargetDuration: 5
   turnToEnemySpeed: 800
+  miniStunDuration: 0
   isAttackBuilding: 0
   isAggressiveWhileSummonerIdle: 0
+  switchTargetDelay: 3
 --- !u!1 &8015959507206410844
 GameObject:
   m_ObjectHideFlags: 0

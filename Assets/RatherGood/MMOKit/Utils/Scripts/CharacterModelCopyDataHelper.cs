@@ -3,6 +3,7 @@ using MultiplayerARPG.GameData.Model.Playables;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using Playables = MultiplayerARPG.GameData.Model.Playables;
 
@@ -40,7 +41,7 @@ namespace RatherGood.MMOKitUtils
         public Playables.ActionAnimation shieldBlockAnimation;
 
         [ArrayElementTitle("SheathweaponType")]
-        public Playables.SheathAnimations[] SheathAnimations;
+        public Playables.SheathAnimations[] sheathAnimations;
 
         public Playables.ActionAnimation shieldSheithAnimation;
 
@@ -53,10 +54,20 @@ namespace RatherGood.MMOKitUtils
 
         [InspectorButton(nameof(CopyDataToCharacters))]
         [SerializeField] bool copyDataToCharacters = false;
+
         public void CopyDataToCharacters()
         {
-            foreach (var tgtModel in targetCharacters)
+
+
+            foreach (var go in targetCharacterGameObjects)
             {
+
+                string assetPath = AssetDatabase.GetAssetPath(go.gameObject);
+
+                // Load the contents of the Prefab Asset.
+                GameObject contentsRoot = PrefabUtility.LoadPrefabContents(assetPath);
+
+                PlayableCharacterModel_Custom tgtModel = contentsRoot.GetComponentInChildren<PlayableCharacterModel_Custom>();
 
                 tgtModel.defaultAnimations = defaultAnimations;
 
@@ -77,12 +88,24 @@ namespace RatherGood.MMOKitUtils
 
                 tgtModel.shieldBlockAnimation = shieldBlockAnimation;
 
-                tgtModel.SheathAnimations = new Playables.SheathAnimations[SheathAnimations.Length];
-                Array.Copy(SheathAnimations, tgtModel.SheathAnimations, SheathAnimations.Length);
+                tgtModel.SheathAnimations = new Playables.SheathAnimations[sheathAnimations.Length];
+
+                for (int i = 0; i < sheathAnimations.Length; i++)
+                {
+                    tgtModel.SheathAnimations[i] = Playables.SheathAnimations.DeepCopy(sheathAnimations[i]);
+                }
+
 
                 tgtModel.shieldSheithAnimation = shieldSheithAnimation;
 
                 tgtModel.shieldUnSheithAnimation = shieldUnSheithAnimation;
+
+                //tgtModel.chargeDurationExtra = chargeDurationExtra;
+
+                // Save contents back to Prefab Asset and unload contents.
+                PrefabUtility.SaveAsPrefabAsset(contentsRoot, assetPath);
+                PrefabUtility.UnloadPrefabContents(contentsRoot);
+
 
             }
 
@@ -90,10 +113,8 @@ namespace RatherGood.MMOKitUtils
         }
 
 
-        [ArrayElementTitle("CacheEntityTitle")] //TODO: Array title not displaying, what am I missing here?
-        public PlayableCharacterModel_Custom[] targetCharacters;
-
-
+        //[ArrayElementTitle("CacheEntityTitle")] //TODO: Aray title not displaying, what am I missing here?
+        public GameObject[] targetCharacterGameObjects;
 
     }
 }

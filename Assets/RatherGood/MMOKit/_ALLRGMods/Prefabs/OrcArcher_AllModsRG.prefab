@@ -10597,7 +10597,1095 @@ MonoBehaviour:
     fixedDuration: 0
     extendDuration: 100
     audioClips: []
-  SheathAnimations: []
+  SheathAnimations:
+  - SheathweaponType: {fileID: 11400000, guid: d433f880a1c9d6149bcbf3b5676ea6a0, type: 2}
+    rightHandSheathAnimations:
+      state:
+        clip: {fileID: 7400000, guid: e538ae71329845540b7eb36b3113d582, type: 3}
+        avatarMask: {fileID: 31900000, guid: 46c4b7ef94e138345b701a79ad0e62c2, type: 2}
+        animSpeedRate: 0
+        transitionDuration: 0
+        isAdditive: 0
+        applyFootIk: 0
+        applyPlayableIk: 0
+      triggerDurationRates:
+      - 0.556
+      durationType: 0
+      fixedDuration: 0
+      extendDuration: 0
+      audioClips:
+      - {fileID: 0}
+      - {fileID: 0}
+    rightHandUnSheathAnimations:
+      state:
+        clip: {fileID: 7400000, guid: fa43b8e3a4edbaf4588b0a302e16c0f6, type: 3}
+        avatarMask: {fileID: 31900000, guid: 46c4b7ef94e138345b701a79ad0e62c2, type: 2}
+        animSpeedRate: 0
+        transitionDuration: 0
+        isAdditive: 0
+        applyFootIk: 0
+        applyPlayableIk: 0
+      triggerDurationRates:
+      - 0.644
+      durationType: 0
+      fixedDuration: 0
+      extendDuration: 0
+      audioClips:
+      - {fileID: 0}
+      - {fileID: 0}
+    leftHandSheathAnimations:
+      state:
+        clip: {fileID: 7400000, guid: f8e0a3512fe05e240bf9d4cff6d8fc26, type: 3}
+        avatarMask: {fileID: 31900000, guid: 46c4b7ef94e138345b701a79ad0e62c2, type: 2}
+        animSpeedRate: 0
+        transitionDuration: 0
+        isAdditive: 0
+        applyFootIk: 0
+        applyPlayableIk: 0
+      triggerDurationRates: []
+      durationType: 0
+      fixedDuration: 0
+      extendDuration: 0
+      audioClips: []
+    leftHandUnSheathAnimations:
+      state:
+        clip: {fileID: 7400000, guid: 0ddeadfa9fe0f9b4293bbb380f9aa884, type: 3}
+        avatarMask: {fileID: 31900000, guid: 46c4b7ef94e138345b701a79ad0e62c2, type: 2}
+        animSpeedRate: 0
+        transitionDuration: 0
+        isAdditive: 0
+        applyFootIk: 0
+        applyPlayableIk: 0
+      triggerDurationRates: []
+      durationType: 0
+      fixedDuration: 0
+      extendDuration: 0
+      audioClips: []
+    dualWeildSheathAnimations:
+      state:
+        clip: {fileID: 7400000, guid: e538ae71329845540b7eb36b3113d582, type: 3}
+        avatarMask: {fileID: 31900000, guid: 46c4b7ef94e138345b701a79ad0e62c2, type: 2}
+        animSpeedRate: 0
+        transitionDuration: 0
+        isAdditive: 0
+        applyFootIk: 0
+        applyPlayableIk: 0
+      triggerDurationRates: []
+      durationType: 0
+      fixedDuration: 0
+      extendDuration: 0
+      audioClips: []
+    dualWeildUnSheathAnimations:
+      state:
+        clip: {fileID: 0}
+        avatarMask: {fileID: 31900000, guid: 46c4b7ef94e138345b701a79ad0e62c2, type: 2}
+        animSpeedRate: 0
+        transitionDuration: 0
+        isAdditive: 0
+        applyFootIk: 0
+        applyPlayableIk: 0
+      triggerDurationRates: []
+      durationType: 0
+      fixedDuration: 0
+      extendDuration: 0
+      audioClips: []
+  - SheathweaponType: {fileID: 11400000, guid: 29d4ec088d34fd947821863e5d87b7a8, type: 2}
+    rightHandSheathAnimations:
+      state:
+        clip: {fileID: 0}
+        avatarMask: {fileID: 31900000, guid: 46c4b7ef94e138345b701a79ad0e62c2, type: 2}
+        animSpeedRate: 0
+        transitionDuration: 0
+        isAdditive: 0
+        applyFootIk: 0
+        applyPlayableIk: 0
+      triggerDurationRates: []
+      durationType: 0
+      fixedDuration: 0
+      extendDuration: 0
+      audioClips: []
+    rightHandUnSheathAnimations:
+      state:
+        clip: {fileID: 0}
+        avatarMask: {fileID: 31900000, guid: 46c4b7ef94e138345b701a79ad0e62c2, type: 2}
+        animSpeedRate: 0
+        transitionDuration: 0
+        isAdditive: 0
+        applyFootIk: 0
+        applyPlayableIk: 0
+      triggerDurationRates: []
+      durationType: 0
+      fixedDuration: 0
+      extendDuration: 0
+      audioClips: []
+    leftHandSheathAnimations:
+      state:
+        clip: {fileID: 0}
+        avatarMask: {fileID: 31900000, guid: 46c4b7ef94e138345b701a79ad0e62c2, type: 2}
+        animSpeedRate: 0
+        transitionDuration: 0
+        isAdditive: 0
+        applyFootIk: 0
+        applyPlayableIk: 0
+      triggerDurationRates: []
+      durationType: 0
+      fixedDuration: 0
+      extendDuration: 0
+      audioClips: []
+    leftHandUnSheathAnimations:
+      state:
+        clip: {fileID: 0}
+        avatarMask: {fileID: 31900000, guid: 46c4b7ef94e138345b701a79ad0e62c2, type: 2}
+        animSpeedRate: 0
+        transitionDuration: 0
+        isAdditive: 0
+        applyFootIk: 0
+        applyPlayableIk: 0
+      triggerDurationRates: []
+      durationType: 0
+      fixedDuration: 0
+      extendDuration: 0
+      audioClips: []
+    dualWeildSheathAnimations:
+      state:
+        clip: {fileID: 0}
+        avatarMask: {fileID: 31900000, guid: 46c4b7ef94e138345b701a79ad0e62c2, type: 2}
+        animSpeedRate: 0
+        transitionDuration: 0
+        isAdditive: 0
+        applyFootIk: 0
+        applyPlayableIk: 0
+      triggerDurationRates: []
+      durationType: 0
+      fixedDuration: 0
+      extendDuration: 0
+      audioClips: []
+    dualWeildUnSheathAnimations:
+      state:
+        clip: {fileID: 0}
+        avatarMask: {fileID: 31900000, guid: 46c4b7ef94e138345b701a79ad0e62c2, type: 2}
+        animSpeedRate: 0
+        transitionDuration: 0
+        isAdditive: 0
+        applyFootIk: 0
+        applyPlayableIk: 0
+      triggerDurationRates: []
+      durationType: 0
+      fixedDuration: 0
+      extendDuration: 0
+      audioClips: []
+  - SheathweaponType: {fileID: 11400000, guid: a33855f9c9112894fbf4fb803ab001da, type: 2}
+    rightHandSheathAnimations:
+      state:
+        clip: {fileID: 7400000, guid: 7dc4b6c333abbab4390b26e7a4f01493, type: 3}
+        avatarMask: {fileID: 31900000, guid: 46c4b7ef94e138345b701a79ad0e62c2, type: 2}
+        animSpeedRate: 0
+        transitionDuration: 0
+        isAdditive: 0
+        applyFootIk: 0
+        applyPlayableIk: 0
+      triggerDurationRates: []
+      durationType: 0
+      fixedDuration: 0
+      extendDuration: 0
+      audioClips:
+      - {fileID: 0}
+    rightHandUnSheathAnimations:
+      state:
+        clip: {fileID: 7400000, guid: 64b826e2cfd53fe44925f54f3af986ae, type: 3}
+        avatarMask: {fileID: 31900000, guid: 46c4b7ef94e138345b701a79ad0e62c2, type: 2}
+        animSpeedRate: 0
+        transitionDuration: 0
+        isAdditive: 0
+        applyFootIk: 0
+        applyPlayableIk: 0
+      triggerDurationRates: []
+      durationType: 0
+      fixedDuration: 0
+      extendDuration: 0
+      audioClips:
+      - {fileID: 0}
+    leftHandSheathAnimations:
+      state:
+        clip: {fileID: 7400000, guid: 7dc4b6c333abbab4390b26e7a4f01493, type: 3}
+        avatarMask: {fileID: 31900000, guid: 46c4b7ef94e138345b701a79ad0e62c2, type: 2}
+        animSpeedRate: 0
+        transitionDuration: 0
+        isAdditive: 0
+        applyFootIk: 0
+        applyPlayableIk: 0
+      triggerDurationRates: []
+      durationType: 0
+      fixedDuration: 0
+      extendDuration: 0
+      audioClips: []
+    leftHandUnSheathAnimations:
+      state:
+        clip: {fileID: 7400000, guid: 64b826e2cfd53fe44925f54f3af986ae, type: 3}
+        avatarMask: {fileID: 31900000, guid: 46c4b7ef94e138345b701a79ad0e62c2, type: 2}
+        animSpeedRate: 0
+        transitionDuration: 0
+        isAdditive: 0
+        applyFootIk: 0
+        applyPlayableIk: 0
+      triggerDurationRates: []
+      durationType: 0
+      fixedDuration: 0
+      extendDuration: 0
+      audioClips: []
+    dualWeildSheathAnimations:
+      state:
+        clip: {fileID: 7400000, guid: 4638ca7fe98a28044a1dd9205af58dea, type: 3}
+        avatarMask: {fileID: 31900000, guid: 46c4b7ef94e138345b701a79ad0e62c2, type: 2}
+        animSpeedRate: 0
+        transitionDuration: 0
+        isAdditive: 0
+        applyFootIk: 0
+        applyPlayableIk: 0
+      triggerDurationRates: []
+      durationType: 0
+      fixedDuration: 0
+      extendDuration: 0
+      audioClips: []
+    dualWeildUnSheathAnimations:
+      state:
+        clip: {fileID: 7400000, guid: f95c96d798bb3b14c8087b88ad5c9f5d, type: 3}
+        avatarMask: {fileID: 31900000, guid: 46c4b7ef94e138345b701a79ad0e62c2, type: 2}
+        animSpeedRate: 0
+        transitionDuration: 0
+        isAdditive: 0
+        applyFootIk: 0
+        applyPlayableIk: 0
+      triggerDurationRates: []
+      durationType: 0
+      fixedDuration: 0
+      extendDuration: 0
+      audioClips: []
+  - SheathweaponType: {fileID: 11400000, guid: e7222e27ac0a6a4469bcc10433800ba9, type: 2}
+    rightHandSheathAnimations:
+      state:
+        clip: {fileID: 7400000, guid: 0fa6944fce950c741894b09734340400, type: 3}
+        avatarMask: {fileID: 31900000, guid: 46c4b7ef94e138345b701a79ad0e62c2, type: 2}
+        animSpeedRate: 0
+        transitionDuration: 0
+        isAdditive: 0
+        applyFootIk: 0
+        applyPlayableIk: 0
+      triggerDurationRates: []
+      durationType: 0
+      fixedDuration: 0
+      extendDuration: 0
+      audioClips:
+      - {fileID: 0}
+      - {fileID: 0}
+    rightHandUnSheathAnimations:
+      state:
+        clip: {fileID: 7400000, guid: d61c6f0d735272746b38572ce675078c, type: 3}
+        avatarMask: {fileID: 31900000, guid: 46c4b7ef94e138345b701a79ad0e62c2, type: 2}
+        animSpeedRate: 0
+        transitionDuration: 0
+        isAdditive: 0
+        applyFootIk: 0
+        applyPlayableIk: 0
+      triggerDurationRates: []
+      durationType: 0
+      fixedDuration: 0
+      extendDuration: 0
+      audioClips:
+      - {fileID: 0}
+      - {fileID: 0}
+    leftHandSheathAnimations:
+      state:
+        clip: {fileID: 7400000, guid: 038b8a0ab7d915b408e92a7304230e8b, type: 3}
+        avatarMask: {fileID: 31900000, guid: 46c4b7ef94e138345b701a79ad0e62c2, type: 2}
+        animSpeedRate: 0
+        transitionDuration: 0
+        isAdditive: 0
+        applyFootIk: 0
+        applyPlayableIk: 0
+      triggerDurationRates: []
+      durationType: 0
+      fixedDuration: 0
+      extendDuration: 0
+      audioClips:
+      - {fileID: 0}
+      - {fileID: 0}
+    leftHandUnSheathAnimations:
+      state:
+        clip: {fileID: 7400000, guid: dc073bf462ca1fe4292dfc705927a72f, type: 3}
+        avatarMask: {fileID: 31900000, guid: 46c4b7ef94e138345b701a79ad0e62c2, type: 2}
+        animSpeedRate: 0
+        transitionDuration: 0
+        isAdditive: 0
+        applyFootIk: 0
+        applyPlayableIk: 0
+      triggerDurationRates: []
+      durationType: 0
+      fixedDuration: 0
+      extendDuration: 0
+      audioClips:
+      - {fileID: 0}
+      - {fileID: 0}
+    dualWeildSheathAnimations:
+      state:
+        clip: {fileID: 7400000, guid: 384d1be18699fe04585cd5d48eb42ba1, type: 3}
+        avatarMask: {fileID: 31900000, guid: 46c4b7ef94e138345b701a79ad0e62c2, type: 2}
+        animSpeedRate: 0
+        transitionDuration: 0
+        isAdditive: 0
+        applyFootIk: 0
+        applyPlayableIk: 0
+      triggerDurationRates: []
+      durationType: 0
+      fixedDuration: 0
+      extendDuration: 0
+      audioClips:
+      - {fileID: 0}
+      - {fileID: 0}
+    dualWeildUnSheathAnimations:
+      state:
+        clip: {fileID: 7400000, guid: 0ce213ce63c3879449dd5daac093b893, type: 3}
+        avatarMask: {fileID: 31900000, guid: 46c4b7ef94e138345b701a79ad0e62c2, type: 2}
+        animSpeedRate: 0
+        transitionDuration: 0
+        isAdditive: 0
+        applyFootIk: 0
+        applyPlayableIk: 0
+      triggerDurationRates: []
+      durationType: 0
+      fixedDuration: 0
+      extendDuration: 0
+      audioClips:
+      - {fileID: 0}
+      - {fileID: 0}
+  - SheathweaponType: {fileID: 11400000, guid: 03e35878a135bc24091a269fe58983cd, type: 2}
+    rightHandSheathAnimations:
+      state:
+        clip: {fileID: 7400000, guid: 0fa6944fce950c741894b09734340400, type: 3}
+        avatarMask: {fileID: 31900000, guid: 46c4b7ef94e138345b701a79ad0e62c2, type: 2}
+        animSpeedRate: 0
+        transitionDuration: 0
+        isAdditive: 0
+        applyFootIk: 0
+        applyPlayableIk: 0
+      triggerDurationRates: []
+      durationType: 0
+      fixedDuration: 0
+      extendDuration: 0
+      audioClips:
+      - {fileID: 0}
+      - {fileID: 0}
+    rightHandUnSheathAnimations:
+      state:
+        clip: {fileID: 7400000, guid: d61c6f0d735272746b38572ce675078c, type: 3}
+        avatarMask: {fileID: 31900000, guid: 46c4b7ef94e138345b701a79ad0e62c2, type: 2}
+        animSpeedRate: 0
+        transitionDuration: 0
+        isAdditive: 0
+        applyFootIk: 0
+        applyPlayableIk: 0
+      triggerDurationRates: []
+      durationType: 0
+      fixedDuration: 0
+      extendDuration: 0
+      audioClips:
+      - {fileID: 0}
+      - {fileID: 0}
+    leftHandSheathAnimations:
+      state:
+        clip: {fileID: 7400000, guid: 038b8a0ab7d915b408e92a7304230e8b, type: 3}
+        avatarMask: {fileID: 31900000, guid: 46c4b7ef94e138345b701a79ad0e62c2, type: 2}
+        animSpeedRate: 0
+        transitionDuration: 0
+        isAdditive: 0
+        applyFootIk: 0
+        applyPlayableIk: 0
+      triggerDurationRates: []
+      durationType: 0
+      fixedDuration: 0
+      extendDuration: 0
+      audioClips:
+      - {fileID: 0}
+      - {fileID: 0}
+    leftHandUnSheathAnimations:
+      state:
+        clip: {fileID: 7400000, guid: dc073bf462ca1fe4292dfc705927a72f, type: 3}
+        avatarMask: {fileID: 31900000, guid: 46c4b7ef94e138345b701a79ad0e62c2, type: 2}
+        animSpeedRate: 0
+        transitionDuration: 0
+        isAdditive: 0
+        applyFootIk: 0
+        applyPlayableIk: 0
+      triggerDurationRates: []
+      durationType: 0
+      fixedDuration: 0
+      extendDuration: 0
+      audioClips:
+      - {fileID: 0}
+      - {fileID: 0}
+    dualWeildSheathAnimations:
+      state:
+        clip: {fileID: 7400000, guid: 384d1be18699fe04585cd5d48eb42ba1, type: 3}
+        avatarMask: {fileID: 31900000, guid: 46c4b7ef94e138345b701a79ad0e62c2, type: 2}
+        animSpeedRate: 0
+        transitionDuration: 0
+        isAdditive: 0
+        applyFootIk: 0
+        applyPlayableIk: 0
+      triggerDurationRates: []
+      durationType: 0
+      fixedDuration: 0
+      extendDuration: 0
+      audioClips:
+      - {fileID: 0}
+      - {fileID: 0}
+    dualWeildUnSheathAnimations:
+      state:
+        clip: {fileID: 7400000, guid: 0ce213ce63c3879449dd5daac093b893, type: 3}
+        avatarMask: {fileID: 31900000, guid: 46c4b7ef94e138345b701a79ad0e62c2, type: 2}
+        animSpeedRate: 0
+        transitionDuration: 0
+        isAdditive: 0
+        applyFootIk: 0
+        applyPlayableIk: 0
+      triggerDurationRates: []
+      durationType: 0
+      fixedDuration: 0
+      extendDuration: 0
+      audioClips:
+      - {fileID: 0}
+      - {fileID: 0}
+  - SheathweaponType: {fileID: 11400000, guid: 74be1d06c6a5cce4aa701763a731139a, type: 2}
+    rightHandSheathAnimations:
+      state:
+        clip: {fileID: 7400000, guid: 0fa6944fce950c741894b09734340400, type: 3}
+        avatarMask: {fileID: 31900000, guid: 46c4b7ef94e138345b701a79ad0e62c2, type: 2}
+        animSpeedRate: 0
+        transitionDuration: 0
+        isAdditive: 0
+        applyFootIk: 0
+        applyPlayableIk: 0
+      triggerDurationRates: []
+      durationType: 0
+      fixedDuration: 0
+      extendDuration: 0
+      audioClips:
+      - {fileID: 0}
+      - {fileID: 0}
+    rightHandUnSheathAnimations:
+      state:
+        clip: {fileID: 7400000, guid: d61c6f0d735272746b38572ce675078c, type: 3}
+        avatarMask: {fileID: 31900000, guid: 46c4b7ef94e138345b701a79ad0e62c2, type: 2}
+        animSpeedRate: 0
+        transitionDuration: 0
+        isAdditive: 0
+        applyFootIk: 0
+        applyPlayableIk: 0
+      triggerDurationRates: []
+      durationType: 0
+      fixedDuration: 0
+      extendDuration: 0
+      audioClips:
+      - {fileID: 0}
+      - {fileID: 0}
+    leftHandSheathAnimations:
+      state:
+        clip: {fileID: 7400000, guid: 038b8a0ab7d915b408e92a7304230e8b, type: 3}
+        avatarMask: {fileID: 31900000, guid: 46c4b7ef94e138345b701a79ad0e62c2, type: 2}
+        animSpeedRate: 0
+        transitionDuration: 0
+        isAdditive: 0
+        applyFootIk: 0
+        applyPlayableIk: 0
+      triggerDurationRates: []
+      durationType: 0
+      fixedDuration: 0
+      extendDuration: 0
+      audioClips:
+      - {fileID: 0}
+      - {fileID: 0}
+    leftHandUnSheathAnimations:
+      state:
+        clip: {fileID: 7400000, guid: dc073bf462ca1fe4292dfc705927a72f, type: 3}
+        avatarMask: {fileID: 31900000, guid: 46c4b7ef94e138345b701a79ad0e62c2, type: 2}
+        animSpeedRate: 0
+        transitionDuration: 0
+        isAdditive: 0
+        applyFootIk: 0
+        applyPlayableIk: 0
+      triggerDurationRates: []
+      durationType: 0
+      fixedDuration: 0
+      extendDuration: 0
+      audioClips:
+      - {fileID: 0}
+      - {fileID: 0}
+    dualWeildSheathAnimations:
+      state:
+        clip: {fileID: 7400000, guid: 384d1be18699fe04585cd5d48eb42ba1, type: 3}
+        avatarMask: {fileID: 31900000, guid: 46c4b7ef94e138345b701a79ad0e62c2, type: 2}
+        animSpeedRate: 0
+        transitionDuration: 0
+        isAdditive: 0
+        applyFootIk: 0
+        applyPlayableIk: 0
+      triggerDurationRates: []
+      durationType: 0
+      fixedDuration: 0
+      extendDuration: 0
+      audioClips:
+      - {fileID: 0}
+      - {fileID: 0}
+    dualWeildUnSheathAnimations:
+      state:
+        clip: {fileID: 7400000, guid: 0ce213ce63c3879449dd5daac093b893, type: 3}
+        avatarMask: {fileID: 31900000, guid: 46c4b7ef94e138345b701a79ad0e62c2, type: 2}
+        animSpeedRate: 0
+        transitionDuration: 0
+        isAdditive: 0
+        applyFootIk: 0
+        applyPlayableIk: 0
+      triggerDurationRates: []
+      durationType: 0
+      fixedDuration: 0
+      extendDuration: 0
+      audioClips:
+      - {fileID: 0}
+      - {fileID: 0}
+  - SheathweaponType: {fileID: 11400000, guid: 8b3d81de465b509438c4d6741a122a83, type: 2}
+    rightHandSheathAnimations:
+      state:
+        clip: {fileID: 7400000, guid: 592cfd0df2e998f49823833a6b57b9d5, type: 3}
+        avatarMask: {fileID: 31900000, guid: 46c4b7ef94e138345b701a79ad0e62c2, type: 2}
+        animSpeedRate: 0
+        transitionDuration: 0
+        isAdditive: 0
+        applyFootIk: 0
+        applyPlayableIk: 0
+      triggerDurationRates: []
+      durationType: 0
+      fixedDuration: 0
+      extendDuration: 0
+      audioClips:
+      - {fileID: 0}
+      - {fileID: 0}
+    rightHandUnSheathAnimations:
+      state:
+        clip: {fileID: 7400000, guid: fd28cfef89aeaad4c889a67176677f0b, type: 3}
+        avatarMask: {fileID: 31900000, guid: 46c4b7ef94e138345b701a79ad0e62c2, type: 2}
+        animSpeedRate: 0
+        transitionDuration: 0
+        isAdditive: 0
+        applyFootIk: 0
+        applyPlayableIk: 0
+      triggerDurationRates: []
+      durationType: 0
+      fixedDuration: 0
+      extendDuration: 0
+      audioClips:
+      - {fileID: 0}
+      - {fileID: 0}
+    leftHandSheathAnimations:
+      state:
+        clip: {fileID: 7400000, guid: c10595db79b33624080794cb1cf7f863, type: 3}
+        avatarMask: {fileID: 31900000, guid: 46c4b7ef94e138345b701a79ad0e62c2, type: 2}
+        animSpeedRate: 0
+        transitionDuration: 0
+        isAdditive: 0
+        applyFootIk: 0
+        applyPlayableIk: 0
+      triggerDurationRates: []
+      durationType: 0
+      fixedDuration: 0
+      extendDuration: 0
+      audioClips:
+      - {fileID: 0}
+      - {fileID: 0}
+    leftHandUnSheathAnimations:
+      state:
+        clip: {fileID: 7400000, guid: e9693a1e011bac44bba380883116f6aa, type: 3}
+        avatarMask: {fileID: 31900000, guid: 46c4b7ef94e138345b701a79ad0e62c2, type: 2}
+        animSpeedRate: 0
+        transitionDuration: 0
+        isAdditive: 0
+        applyFootIk: 0
+        applyPlayableIk: 0
+      triggerDurationRates: []
+      durationType: 0
+      fixedDuration: 0
+      extendDuration: 0
+      audioClips:
+      - {fileID: 0}
+      - {fileID: 0}
+    dualWeildSheathAnimations:
+      state:
+        clip: {fileID: 7400000, guid: 687dffe2824275b44a08a3dd6e11f3d4, type: 3}
+        avatarMask: {fileID: 31900000, guid: 46c4b7ef94e138345b701a79ad0e62c2, type: 2}
+        animSpeedRate: 0
+        transitionDuration: 0
+        isAdditive: 0
+        applyFootIk: 0
+        applyPlayableIk: 0
+      triggerDurationRates: []
+      durationType: 0
+      fixedDuration: 0
+      extendDuration: 0
+      audioClips:
+      - {fileID: 0}
+      - {fileID: 0}
+    dualWeildUnSheathAnimations:
+      state:
+        clip: {fileID: 7400000, guid: 1efc9867c6a28c94eb872b7fcf7ddcb6, type: 3}
+        avatarMask: {fileID: 31900000, guid: 46c4b7ef94e138345b701a79ad0e62c2, type: 2}
+        animSpeedRate: 0
+        transitionDuration: 0
+        isAdditive: 0
+        applyFootIk: 0
+        applyPlayableIk: 0
+      triggerDurationRates: []
+      durationType: 0
+      fixedDuration: 0
+      extendDuration: 0
+      audioClips:
+      - {fileID: 0}
+      - {fileID: 0}
+  - SheathweaponType: {fileID: 11400000, guid: 68fba38efbfdced49a5d1e2ae95c0026, type: 2}
+    rightHandSheathAnimations:
+      state:
+        clip: {fileID: 7400000, guid: 592cfd0df2e998f49823833a6b57b9d5, type: 3}
+        avatarMask: {fileID: 31900000, guid: 46c4b7ef94e138345b701a79ad0e62c2, type: 2}
+        animSpeedRate: 0
+        transitionDuration: 0
+        isAdditive: 0
+        applyFootIk: 0
+        applyPlayableIk: 0
+      triggerDurationRates: []
+      durationType: 0
+      fixedDuration: 0
+      extendDuration: 0
+      audioClips:
+      - {fileID: 0}
+      - {fileID: 0}
+    rightHandUnSheathAnimations:
+      state:
+        clip: {fileID: 7400000, guid: fd28cfef89aeaad4c889a67176677f0b, type: 3}
+        avatarMask: {fileID: 31900000, guid: 46c4b7ef94e138345b701a79ad0e62c2, type: 2}
+        animSpeedRate: 0
+        transitionDuration: 0
+        isAdditive: 0
+        applyFootIk: 0
+        applyPlayableIk: 0
+      triggerDurationRates: []
+      durationType: 0
+      fixedDuration: 0
+      extendDuration: 0
+      audioClips:
+      - {fileID: 0}
+      - {fileID: 0}
+    leftHandSheathAnimations:
+      state:
+        clip: {fileID: 7400000, guid: c10595db79b33624080794cb1cf7f863, type: 3}
+        avatarMask: {fileID: 31900000, guid: 46c4b7ef94e138345b701a79ad0e62c2, type: 2}
+        animSpeedRate: 0
+        transitionDuration: 0
+        isAdditive: 0
+        applyFootIk: 0
+        applyPlayableIk: 0
+      triggerDurationRates: []
+      durationType: 0
+      fixedDuration: 0
+      extendDuration: 0
+      audioClips:
+      - {fileID: 0}
+      - {fileID: 0}
+    leftHandUnSheathAnimations:
+      state:
+        clip: {fileID: 7400000, guid: e9693a1e011bac44bba380883116f6aa, type: 3}
+        avatarMask: {fileID: 31900000, guid: 46c4b7ef94e138345b701a79ad0e62c2, type: 2}
+        animSpeedRate: 0
+        transitionDuration: 0
+        isAdditive: 0
+        applyFootIk: 0
+        applyPlayableIk: 0
+      triggerDurationRates: []
+      durationType: 0
+      fixedDuration: 0
+      extendDuration: 0
+      audioClips:
+      - {fileID: 0}
+      - {fileID: 0}
+    dualWeildSheathAnimations:
+      state:
+        clip: {fileID: 7400000, guid: 687dffe2824275b44a08a3dd6e11f3d4, type: 3}
+        avatarMask: {fileID: 31900000, guid: 46c4b7ef94e138345b701a79ad0e62c2, type: 2}
+        animSpeedRate: 0
+        transitionDuration: 0
+        isAdditive: 0
+        applyFootIk: 0
+        applyPlayableIk: 0
+      triggerDurationRates: []
+      durationType: 0
+      fixedDuration: 0
+      extendDuration: 0
+      audioClips:
+      - {fileID: 0}
+      - {fileID: 0}
+    dualWeildUnSheathAnimations:
+      state:
+        clip: {fileID: 7400000, guid: 1efc9867c6a28c94eb872b7fcf7ddcb6, type: 3}
+        avatarMask: {fileID: 31900000, guid: 46c4b7ef94e138345b701a79ad0e62c2, type: 2}
+        animSpeedRate: 0
+        transitionDuration: 0
+        isAdditive: 0
+        applyFootIk: 0
+        applyPlayableIk: 0
+      triggerDurationRates: []
+      durationType: 0
+      fixedDuration: 0
+      extendDuration: 0
+      audioClips:
+      - {fileID: 0}
+      - {fileID: 0}
+  - SheathweaponType: {fileID: 11400000, guid: 4580bbe4f4136e64aa2c4ca9f037103d, type: 2}
+    rightHandSheathAnimations:
+      state:
+        clip: {fileID: 7400000, guid: 4638ca7fe98a28044a1dd9205af58dea, type: 3}
+        avatarMask: {fileID: 31900000, guid: 46c4b7ef94e138345b701a79ad0e62c2, type: 2}
+        animSpeedRate: 0
+        transitionDuration: 0
+        isAdditive: 0
+        applyFootIk: 0
+        applyPlayableIk: 0
+      triggerDurationRates: []
+      durationType: 0
+      fixedDuration: 0
+      extendDuration: 0
+      audioClips: []
+    rightHandUnSheathAnimations:
+      state:
+        clip: {fileID: 7400000, guid: f95c96d798bb3b14c8087b88ad5c9f5d, type: 3}
+        avatarMask: {fileID: 31900000, guid: 46c4b7ef94e138345b701a79ad0e62c2, type: 2}
+        animSpeedRate: 0
+        transitionDuration: 0
+        isAdditive: 0
+        applyFootIk: 0
+        applyPlayableIk: 0
+      triggerDurationRates: []
+      durationType: 0
+      fixedDuration: 0
+      extendDuration: 0
+      audioClips: []
+    leftHandSheathAnimations:
+      state:
+        clip: {fileID: 7400000, guid: 4638ca7fe98a28044a1dd9205af58dea, type: 3}
+        avatarMask: {fileID: 31900000, guid: 46c4b7ef94e138345b701a79ad0e62c2, type: 2}
+        animSpeedRate: 0
+        transitionDuration: 0
+        isAdditive: 0
+        applyFootIk: 0
+        applyPlayableIk: 0
+      triggerDurationRates: []
+      durationType: 0
+      fixedDuration: 0
+      extendDuration: 0
+      audioClips: []
+    leftHandUnSheathAnimations:
+      state:
+        clip: {fileID: 7400000, guid: f95c96d798bb3b14c8087b88ad5c9f5d, type: 3}
+        avatarMask: {fileID: 31900000, guid: 46c4b7ef94e138345b701a79ad0e62c2, type: 2}
+        animSpeedRate: 0
+        transitionDuration: 0
+        isAdditive: 0
+        applyFootIk: 0
+        applyPlayableIk: 0
+      triggerDurationRates: []
+      durationType: 0
+      fixedDuration: 0
+      extendDuration: 0
+      audioClips: []
+    dualWeildSheathAnimations:
+      state:
+        clip: {fileID: 7400000, guid: 4638ca7fe98a28044a1dd9205af58dea, type: 3}
+        avatarMask: {fileID: 31900000, guid: 46c4b7ef94e138345b701a79ad0e62c2, type: 2}
+        animSpeedRate: 0
+        transitionDuration: 0
+        isAdditive: 0
+        applyFootIk: 0
+        applyPlayableIk: 0
+      triggerDurationRates: []
+      durationType: 0
+      fixedDuration: 0
+      extendDuration: 0
+      audioClips: []
+    dualWeildUnSheathAnimations:
+      state:
+        clip: {fileID: 7400000, guid: f95c96d798bb3b14c8087b88ad5c9f5d, type: 3}
+        avatarMask: {fileID: 31900000, guid: 46c4b7ef94e138345b701a79ad0e62c2, type: 2}
+        animSpeedRate: 0
+        transitionDuration: 0
+        isAdditive: 0
+        applyFootIk: 0
+        applyPlayableIk: 0
+      triggerDurationRates: []
+      durationType: 0
+      fixedDuration: 0
+      extendDuration: 0
+      audioClips: []
+  - SheathweaponType: {fileID: 11400000, guid: 85d155807f1a6aa43b4b7a5522ad9021, type: 2}
+    rightHandSheathAnimations:
+      state:
+        clip: {fileID: 7400000, guid: 4638ca7fe98a28044a1dd9205af58dea, type: 3}
+        avatarMask: {fileID: 31900000, guid: 46c4b7ef94e138345b701a79ad0e62c2, type: 2}
+        animSpeedRate: 0
+        transitionDuration: 0
+        isAdditive: 0
+        applyFootIk: 0
+        applyPlayableIk: 0
+      triggerDurationRates: []
+      durationType: 0
+      fixedDuration: 0
+      extendDuration: 0
+      audioClips: []
+    rightHandUnSheathAnimations:
+      state:
+        clip: {fileID: 7400000, guid: f95c96d798bb3b14c8087b88ad5c9f5d, type: 3}
+        avatarMask: {fileID: 31900000, guid: 46c4b7ef94e138345b701a79ad0e62c2, type: 2}
+        animSpeedRate: 0
+        transitionDuration: 0
+        isAdditive: 0
+        applyFootIk: 0
+        applyPlayableIk: 0
+      triggerDurationRates: []
+      durationType: 0
+      fixedDuration: 0
+      extendDuration: 0
+      audioClips: []
+    leftHandSheathAnimations:
+      state:
+        clip: {fileID: 7400000, guid: 4638ca7fe98a28044a1dd9205af58dea, type: 3}
+        avatarMask: {fileID: 31900000, guid: 46c4b7ef94e138345b701a79ad0e62c2, type: 2}
+        animSpeedRate: 0
+        transitionDuration: 0
+        isAdditive: 0
+        applyFootIk: 0
+        applyPlayableIk: 0
+      triggerDurationRates: []
+      durationType: 0
+      fixedDuration: 0
+      extendDuration: 0
+      audioClips: []
+    leftHandUnSheathAnimations:
+      state:
+        clip: {fileID: 7400000, guid: f95c96d798bb3b14c8087b88ad5c9f5d, type: 3}
+        avatarMask: {fileID: 31900000, guid: 46c4b7ef94e138345b701a79ad0e62c2, type: 2}
+        animSpeedRate: 0
+        transitionDuration: 0
+        isAdditive: 0
+        applyFootIk: 0
+        applyPlayableIk: 0
+      triggerDurationRates: []
+      durationType: 0
+      fixedDuration: 0
+      extendDuration: 0
+      audioClips: []
+    dualWeildSheathAnimations:
+      state:
+        clip: {fileID: 7400000, guid: 4638ca7fe98a28044a1dd9205af58dea, type: 3}
+        avatarMask: {fileID: 31900000, guid: 46c4b7ef94e138345b701a79ad0e62c2, type: 2}
+        animSpeedRate: 0
+        transitionDuration: 0
+        isAdditive: 0
+        applyFootIk: 0
+        applyPlayableIk: 0
+      triggerDurationRates: []
+      durationType: 0
+      fixedDuration: 0
+      extendDuration: 0
+      audioClips: []
+    dualWeildUnSheathAnimations:
+      state:
+        clip: {fileID: 7400000, guid: f95c96d798bb3b14c8087b88ad5c9f5d, type: 3}
+        avatarMask: {fileID: 31900000, guid: 46c4b7ef94e138345b701a79ad0e62c2, type: 2}
+        animSpeedRate: 0
+        transitionDuration: 0
+        isAdditive: 0
+        applyFootIk: 0
+        applyPlayableIk: 0
+      triggerDurationRates: []
+      durationType: 0
+      fixedDuration: 0
+      extendDuration: 0
+      audioClips: []
+  - SheathweaponType: {fileID: 11400000, guid: 25df45a3f5bf6f64a8bb8a73c5df6698, type: 2}
+    rightHandSheathAnimations:
+      state:
+        clip: {fileID: 7400000, guid: b7aa6d401e8433d459a05e0ab7f2aae7, type: 3}
+        avatarMask: {fileID: 31900000, guid: 46c4b7ef94e138345b701a79ad0e62c2, type: 2}
+        animSpeedRate: 0
+        transitionDuration: 0
+        isAdditive: 0
+        applyFootIk: 0
+        applyPlayableIk: 0
+      triggerDurationRates: []
+      durationType: 0
+      fixedDuration: 0
+      extendDuration: 0
+      audioClips: []
+    rightHandUnSheathAnimations:
+      state:
+        clip: {fileID: 7400000, guid: 55ea9a03f0447f94f82fe9f090fe30d0, type: 3}
+        avatarMask: {fileID: 31900000, guid: 46c4b7ef94e138345b701a79ad0e62c2, type: 2}
+        animSpeedRate: 0
+        transitionDuration: 0
+        isAdditive: 0
+        applyFootIk: 0
+        applyPlayableIk: 0
+      triggerDurationRates: []
+      durationType: 0
+      fixedDuration: 0
+      extendDuration: 0
+      audioClips: []
+    leftHandSheathAnimations:
+      state:
+        clip: {fileID: 7400000, guid: 4638ca7fe98a28044a1dd9205af58dea, type: 3}
+        avatarMask: {fileID: 31900000, guid: 46c4b7ef94e138345b701a79ad0e62c2, type: 2}
+        animSpeedRate: 0
+        transitionDuration: 0
+        isAdditive: 0
+        applyFootIk: 0
+        applyPlayableIk: 0
+      triggerDurationRates: []
+      durationType: 0
+      fixedDuration: 0
+      extendDuration: 0
+      audioClips: []
+    leftHandUnSheathAnimations:
+      state:
+        clip: {fileID: 7400000, guid: f95c96d798bb3b14c8087b88ad5c9f5d, type: 3}
+        avatarMask: {fileID: 31900000, guid: 46c4b7ef94e138345b701a79ad0e62c2, type: 2}
+        animSpeedRate: 0
+        transitionDuration: 0
+        isAdditive: 0
+        applyFootIk: 0
+        applyPlayableIk: 0
+      triggerDurationRates: []
+      durationType: 0
+      fixedDuration: 0
+      extendDuration: 0
+      audioClips: []
+    dualWeildSheathAnimations:
+      state:
+        clip: {fileID: 7400000, guid: 4638ca7fe98a28044a1dd9205af58dea, type: 3}
+        avatarMask: {fileID: 31900000, guid: 46c4b7ef94e138345b701a79ad0e62c2, type: 2}
+        animSpeedRate: 0
+        transitionDuration: 0
+        isAdditive: 0
+        applyFootIk: 0
+        applyPlayableIk: 0
+      triggerDurationRates: []
+      durationType: 0
+      fixedDuration: 0
+      extendDuration: 0
+      audioClips: []
+    dualWeildUnSheathAnimations:
+      state:
+        clip: {fileID: 7400000, guid: f95c96d798bb3b14c8087b88ad5c9f5d, type: 3}
+        avatarMask: {fileID: 31900000, guid: 46c4b7ef94e138345b701a79ad0e62c2, type: 2}
+        animSpeedRate: 0
+        transitionDuration: 0
+        isAdditive: 0
+        applyFootIk: 0
+        applyPlayableIk: 0
+      triggerDurationRates: []
+      durationType: 0
+      fixedDuration: 0
+      extendDuration: 0
+      audioClips: []
+  - SheathweaponType: {fileID: 11400000, guid: f8c1eae7f66f9bb46a41403e61cd87cb, type: 2}
+    rightHandSheathAnimations:
+      state:
+        clip: {fileID: 7400000, guid: 4638ca7fe98a28044a1dd9205af58dea, type: 3}
+        avatarMask: {fileID: 31900000, guid: 46c4b7ef94e138345b701a79ad0e62c2, type: 2}
+        animSpeedRate: 0
+        transitionDuration: 0
+        isAdditive: 0
+        applyFootIk: 0
+        applyPlayableIk: 0
+      triggerDurationRates: []
+      durationType: 0
+      fixedDuration: 0
+      extendDuration: 0
+      audioClips: []
+    rightHandUnSheathAnimations:
+      state:
+        clip: {fileID: 7400000, guid: f95c96d798bb3b14c8087b88ad5c9f5d, type: 3}
+        avatarMask: {fileID: 31900000, guid: 46c4b7ef94e138345b701a79ad0e62c2, type: 2}
+        animSpeedRate: 0
+        transitionDuration: 0
+        isAdditive: 0
+        applyFootIk: 0
+        applyPlayableIk: 0
+      triggerDurationRates: []
+      durationType: 0
+      fixedDuration: 0
+      extendDuration: 0
+      audioClips: []
+    leftHandSheathAnimations:
+      state:
+        clip: {fileID: 7400000, guid: 4638ca7fe98a28044a1dd9205af58dea, type: 3}
+        avatarMask: {fileID: 31900000, guid: 46c4b7ef94e138345b701a79ad0e62c2, type: 2}
+        animSpeedRate: 0
+        transitionDuration: 0
+        isAdditive: 0
+        applyFootIk: 0
+        applyPlayableIk: 0
+      triggerDurationRates: []
+      durationType: 0
+      fixedDuration: 0
+      extendDuration: 0
+      audioClips: []
+    leftHandUnSheathAnimations:
+      state:
+        clip: {fileID: 7400000, guid: f95c96d798bb3b14c8087b88ad5c9f5d, type: 3}
+        avatarMask: {fileID: 31900000, guid: 46c4b7ef94e138345b701a79ad0e62c2, type: 2}
+        animSpeedRate: 0
+        transitionDuration: 0
+        isAdditive: 0
+        applyFootIk: 0
+        applyPlayableIk: 0
+      triggerDurationRates: []
+      durationType: 0
+      fixedDuration: 0
+      extendDuration: 0
+      audioClips: []
+    dualWeildSheathAnimations:
+      state:
+        clip: {fileID: 7400000, guid: 4638ca7fe98a28044a1dd9205af58dea, type: 3}
+        avatarMask: {fileID: 31900000, guid: 46c4b7ef94e138345b701a79ad0e62c2, type: 2}
+        animSpeedRate: 0
+        transitionDuration: 0
+        isAdditive: 0
+        applyFootIk: 0
+        applyPlayableIk: 0
+      triggerDurationRates: []
+      durationType: 0
+      fixedDuration: 0
+      extendDuration: 0
+      audioClips: []
+    dualWeildUnSheathAnimations:
+      state:
+        clip: {fileID: 7400000, guid: f95c96d798bb3b14c8087b88ad5c9f5d, type: 3}
+        avatarMask: {fileID: 31900000, guid: 46c4b7ef94e138345b701a79ad0e62c2, type: 2}
+        animSpeedRate: 0
+        transitionDuration: 0
+        isAdditive: 0
+        applyFootIk: 0
+        applyPlayableIk: 0
+      triggerDurationRates: []
+      durationType: 0
+      fixedDuration: 0
+      extendDuration: 0
+      audioClips: []
   shieldSheithAnimation:
     state:
       clip: {fileID: 7400000, guid: 7853cbd2d7cf3c0438d219a6562ad2aa, type: 3}
@@ -10639,20 +11727,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ecbdb998533db547a6980b01bee5917, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RGDebugStartedFollowEnemy: 0
   isSheithedLocal: 0
   RightHandItem: {fileID: 11400000, guid: 0963afdd208056344a1ea27c592e1d03, type: 2}
   startItems:
   - item: {fileID: 11400000, guid: 0df782e70d43dc54d8a6bc2d6a212f89, type: 2}
     amount: 50
+  turnSmoothSpeed: 10
   randomWanderDelayMin: 2
   randomWanderDelayMax: 5
   randomWanderDistance: 2
+  maxDistanceFromSpawnPoint: 5
   findEnemyDelay: 1
   followTargetDuration: 5
   turnToEnemySpeed: 800
+  miniStunDuration: 0
   isAttackBuilding: 1
   isAggressiveWhileSummonerIdle: 1
+  switchTargetDelay: 3
 --- !u!1 &4360149315576457296
 GameObject:
   m_ObjectHideFlags: 0
