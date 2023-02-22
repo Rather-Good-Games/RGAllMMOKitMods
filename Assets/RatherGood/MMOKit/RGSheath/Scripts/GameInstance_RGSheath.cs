@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using UnityEngine;
-using System.Collections.Generic;
+﻿using UnityEngine;
 
 
 namespace MultiplayerARPG

@@ -10,7 +10,6 @@ namespace MultiplayerARPG
 
     public partial class Item
     {
-
         [Category(100, "RG SHEATH")]
 
         [Header("Right hand sheath models")]
@@ -29,6 +28,16 @@ namespace MultiplayerARPG
             get { return leftHandSheathEquipmentModels; }
         }
 
-
+        private bool alreadyMigrated = false;
+        public void MigrateRGSheathModels()
+        {
+            if (alreadyMigrated)
+                return;
+            alreadyMigrated = true;
+            if (RightHandSheathEquipmentModels != null && RightHandSheathEquipmentModels.Length > 0)
+                SheathModels = RightHandSheathEquipmentModels;
+            if (LeftHandSheathEquipmentModels != null && LeftHandSheathEquipmentModels.Length > 0)
+                OffHandSheathModels = LeftHandSheathEquipmentModels;
+        }
     }
 }

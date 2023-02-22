@@ -74,8 +74,8 @@ namespace RatherGood.MMOKitUtils
                 tgtModel.weaponAnimations = new Playables.WeaponAnimations[weaponAnimations.Length];
                 Array.Copy(weaponAnimations, tgtModel.weaponAnimations, weaponAnimations.Length);
 
-                tgtModel.leftHandWieldingWeaponAnimations = new Playables.WieldWeaponAnimations[leftHandWieldingWeaponAnimations.Length];
-                Array.Copy(leftHandWieldingWeaponAnimations, tgtModel.leftHandWieldingWeaponAnimations, leftHandWieldingWeaponAnimations.Length);
+                //tgtModel.leftHandWieldingWeaponAnimations = new Playables.WieldWeaponAnimations[leftHandWieldingWeaponAnimations.Length];
+                //Array.Copy(leftHandWieldingWeaponAnimations, tgtModel.leftHandWieldingWeaponAnimations, leftHandWieldingWeaponAnimations.Length);
 
                 tgtModel.skillAnimations = new Playables.SkillAnimations[skillAnimations.Length];
                 Array.Copy(skillAnimations, tgtModel.skillAnimations, skillAnimations.Length);

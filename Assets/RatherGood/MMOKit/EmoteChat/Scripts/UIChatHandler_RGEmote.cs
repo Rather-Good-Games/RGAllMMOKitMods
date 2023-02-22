@@ -33,13 +33,13 @@ namespace MultiplayerARPG
                     {
                         chatMessage.channel = ChatChannel.Local;
 
-                        if (chatMessage.sender == GameInstance.PlayingCharacter.CharacterName)
+                        if (chatMessage.senderName == GameInstance.PlayingCharacter.CharacterName)
                         {
                             chatMessage.message = emoteAnimationData.GetMessageForEmote(true, GameInstance.PlayingCharacter.CharacterName);
                         }
                         else
                         {
-                            chatMessage.message = emoteAnimationData.GetMessageForEmote(false, chatMessage.sender);
+                            chatMessage.message = emoteAnimationData.GetMessageForEmote(false, chatMessage.senderName);
                         }
                     }
                 }

@@ -7,7 +7,7 @@ namespace RatherGood.DummyAnimEvents
 {
     /// <summary>
     /// Place on character animator to supress errors from spamming the console.
-    /// TODO: HACK: Class catches animator events form Explosive RPG character and Emerald AI and does nothng usefull with them. 
+    /// TODO: HACK: Class catches animator events form Explosive RPG character and Emerald AI and does nothng with them. 
     /// Really should delete the events. PITA can't update assets.
     /// </summary>
     public class RPGCharacterAnimatorEvents_DummyRG : MonoBehaviour

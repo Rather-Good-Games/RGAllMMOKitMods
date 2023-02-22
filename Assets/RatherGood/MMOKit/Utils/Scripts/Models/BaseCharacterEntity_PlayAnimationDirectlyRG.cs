@@ -93,16 +93,16 @@ namespace MultiplayerARPG
 
         }
 
-        public bool IsDoingAction()
+        public bool IsDoingActionRG()
         {
 
             if (playableCharacterModel_ForPlayingAnimationDirectly != null)
             {
-                return playableCharacterModel_ForPlayingAnimationDirectly.IsDoingAction();
+                return playableCharacterModel_ForPlayingAnimationDirectly.IsDoingActionRG();
             }
             else if (animatorCharacterModel_ForPlayingAnimationDirectly != null)
             {
-                return animatorCharacterModel_ForPlayingAnimationDirectly.IsDoingAction();
+                return animatorCharacterModel_ForPlayingAnimationDirectly.IsDoingActionRG();
             }
             else
             {

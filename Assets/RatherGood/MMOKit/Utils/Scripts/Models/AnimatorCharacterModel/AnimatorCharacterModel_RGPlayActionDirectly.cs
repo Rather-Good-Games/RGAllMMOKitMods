@@ -23,7 +23,7 @@ namespace MultiplayerARPG
             StopSkillCastAnimation();
             StopWeaponChargeAnimation();
 
-            return StartedActionCoroutine(StartCoroutine(PlayActionAnimationDirectly_Coroutine(actionAnimation)));
+           return StartActionCoroutine(PlayActionAnimationDirectly_Coroutine(actionAnimation));
         }
 
         protected IEnumerator PlayActionAnimationDirectly_Coroutine(ActionAnimation actionAnimation)
@@ -64,7 +64,7 @@ namespace MultiplayerARPG
 
         }
 
-        public void CancelPlayingActionAnimationDirectly(bool stopActionAnimationIfPlaying = true)
+        public void CancelPlayingActionAnimationDirectly(bool stopActionAnimationIfPlaying)
         {
             if (currentAnimationHasClip && stopActionAnimationIfPlaying)
             {
@@ -74,13 +74,11 @@ namespace MultiplayerARPG
         }
 
 
-        public bool IsDoingAction()
+        //Prevent conflict
+        public bool IsDoingActionRG()
         {
             return isDoingAction;
         }
-
-
-
 
 
 

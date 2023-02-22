@@ -10,59 +10,68 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 75d6d0cd4d7cf8c4786ee2be97f454fb, type: 3}
-  m_Name: Bow001_RG
+  m_Name: Sword001_RG
   m_EditorClassIdentifier: 
   id: 
-  defaultTitle: Bow001
+  defaultTitle: Sword001
   languageSpecificTitles: []
   defaultDescription: 
   languageSpecificDescriptions: []
   category: 
-  icon: {fileID: 21300000, guid: b10a2ac879ca3164e8bd67851a5acd9f, type: 3}
+  icon: {fileID: 21300000, guid: 5c5d17ce2c3284940b0f0e5109c69298, type: 3}
   sellPrice: 75
   weight: 1
   maxStack: 1
   itemRefine: {fileID: 11400000, guid: b8c5078d91a221c47a13beb39dcfc030, type: 2}
   lockDuration: 0
-  dropModel: {fileID: 1899427116921868, guid: 731378a9e8363e44f9f97db489208ebc, type: 3}
+  dropModel: {fileID: 1717536752906694, guid: db612684bc4da0f45af41d157478741e, type: 3}
   dismantleReturnGold: 15
   dismantleReturnItems:
   - item: {fileID: 11400000, guid: 34342a09346349345a4313fd6e7657e1, type: 2}
-    amount: 4
+    amount: 2
+  - item: {fileID: 11400000, guid: 5842068f5743c524c967a28b483477ed, type: 2}
+    amount: 2
   cashShopItemGeneratingList: []
   rightHandSheathEquipmentModels:
   - equipSocket: Back_Attachment
     useInstantiatedObject: 0
-    model: {fileID: 1000012646206576, guid: 8dd10cc0cbafc994e92ae2af479492bf, type: 3}
+    model: {fileID: 1000010853050978, guid: a4d72b2e28dda4b46bda6b164b763764, type: 3}
     instantiatedObjectIndex: 0
-    localPosition: {x: -0.068, y: -0.04, z: 0.1225}
-    localEulerAngles: {x: -182.5, y: 0.107, z: 4.3}
+    localPosition: {x: 0.0429, y: 0, z: 0.0443}
+    localEulerAngles: {x: 2.8, y: -31.79, z: -21.6}
     localScale: {x: 1, y: 1, z: 1}
-  leftHandSheathEquipmentModels: []
+  leftHandSheathEquipmentModels:
+  - equipSocket: Back_Attachment
+    useInstantiatedObject: 0
+    model: {fileID: 1000010853050978, guid: a4d72b2e28dda4b46bda6b164b763764, type: 3}
+    instantiatedObjectIndex: 0
+    localPosition: {x: -0.047, y: 0, z: 0.046}
+    localEulerAngles: {x: -7.87, y: 24.16, z: -7.096}
+    localScale: {x: 1, y: 1, z: 1}
   itemType: 2
   useItemCooldown: 0
   equipmentModels:
-  - equipSocket: WeaponL
+  - equipSocket: WeaponR
     useInstantiatedObject: 0
-    model: {fileID: 1000012646206576, guid: 8dd10cc0cbafc994e92ae2af479492bf, type: 3}
+    model: {fileID: 1000010853050978, guid: a4d72b2e28dda4b46bda6b164b763764, type: 3}
     instantiatedObjectIndex: 0
     localPosition: {x: 0, y: 0, z: 0}
     localEulerAngles: {x: 0, y: 0, z: 0}
-    localScale: {x: 0, y: 0, z: 0}
+    localScale: {x: 1, y: 1, z: 1}
   subEquipmentModels:
   - equipSocket: WeaponL
     useInstantiatedObject: 0
-    model: {fileID: 1000012646206576, guid: 8dd10cc0cbafc994e92ae2af479492bf, type: 3}
+    model: {fileID: 1000010853050978, guid: a4d72b2e28dda4b46bda6b164b763764, type: 3}
     instantiatedObjectIndex: 0
     localPosition: {x: 0, y: 0, z: 0}
     localEulerAngles: {x: 0, y: 0, z: 0}
-    localScale: {x: 0, y: 0, z: 0}
+    localScale: {x: 1, y: 1, z: 1}
   requirement:
     availableClass: {fileID: 0}
     availableClasses: []
     level: 0
     attributeAmounts: []
-  equipmentSet: {fileID: 0}
+  equipmentSet: {fileID: 11400000, guid: 20999d469e915904f936510d5cecf079, type: 2}
   maxDurability: 100
   destroyIfBroken: 0
   maxSocket: 2
@@ -72,13 +81,13 @@ MonoBehaviour:
     amount:
       baseAmount: 0
       amountIncreaseEachLevel: 0
-  weaponType: {fileID: 11400000, guid: d433f880a1c9d6149bcbf3b5676ea6a0, type: 2}
+  weaponType: {fileID: 11400000, guid: 68fba38efbfdced49a5d1e2ae95c0026, type: 2}
   damageAmount:
     damageElement: {fileID: 0}
     amount:
       baseAmount:
         min: 3
-        max: 5
+        max: 6
       amountIncreaseEachLevel:
         min: 0.5
         max: 0.75
@@ -91,7 +100,7 @@ MonoBehaviour:
       max: 0
   moveSpeedRateWhileReloading: 1
   moveSpeedRateWhileCharging: 1
-  moveSpeedRateWhileAttacking: 0.5
+  moveSpeedRateWhileAttacking: 0.75
   ammoCapacity: 0
   weaponAbility: {fileID: 0}
   crosshairSetting:
@@ -260,7 +269,7 @@ MonoBehaviour:
     baseStats:
       hp: 0
       hpRecovery: 0
-      hpLeechRate: 0
+      hpLeechRate: 0.25
       mp: 0
       mpRecovery: 0
       mpLeechRate: 0
@@ -362,15 +371,7 @@ MonoBehaviour:
   increaseAttributesRate: []
   increaseResistances: []
   increaseArmors: []
-  increaseDamages:
-  - damageElement: {fileID: 11400000, guid: 3afa55aee773f47438e6f7f3a03cd0b9, type: 2}
-    amount:
-      baseAmount:
-        min: 3
-        max: 5
-      amountIncreaseEachLevel:
-        min: 0
-        max: 0
+  increaseDamages: []
   increaseSkillLevels: []
   ammoType: {fileID: 0}
   buildingEntity: {fileID: 0}

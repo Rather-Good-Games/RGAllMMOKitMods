@@ -55,7 +55,7 @@ namespace MultiplayerARPG.GameData.Model.Playables
 
         }
 
-        public bool IsDoingAction()
+        public bool IsDoingActionRG()
         {
             return isDoingAction;
         }

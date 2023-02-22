@@ -25,7 +25,9 @@ namespace MultiplayerARPG.GameData.Model.Playables
         {
             InitBockingAnimationsDict();
 
-            if (equipWeapons.GetLeftHandShieldItem() != null)
+            EquipWeapons tempEquipWeapons = selectableWeaponSets[equipWeaponSet];
+
+            if (tempEquipWeapons.GetLeftHandShieldItem() != null)
             {
                 blockingActionRoutineRef = (PlayActionAnimationDirectly(shieldBlockAnimation));
                 return true;

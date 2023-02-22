@@ -1,8 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-
 namespace MultiplayerARPG.GameData.Model.Playables
 {
     /// <summary>
@@ -12,6 +7,10 @@ namespace MultiplayerARPG.GameData.Model.Playables
     {
 
         //Dummy class to place component on char
-
+        protected override void Awake()
+        {
+            base.Awake();
+            this.InvokeInstanceDevExtMethods("RG_Awake");
+        }
     }
 }

@@ -14,7 +14,6 @@ namespace MultiplayerARPG
     public partial class PlayerCharacterEntity
     {
 
-
         [DevExtMethods("Awake")]
         protected void AwakeRGEmote()
         {
@@ -25,8 +24,6 @@ namespace MultiplayerARPG
             ClientGenericActions.onClientReceiveChatMessage += ReceiveChatMessage;
             onUpdate += RGEmotePlayerUpdate;
         }
-
-
 
 
         [DevExtMethods("OnDestroy")]
@@ -48,7 +45,7 @@ namespace MultiplayerARPG
             if (CurrentGameInstance.EnableRatherGoodEmotes)
             {
 
-                if (msg.sender != CharacterName)
+                if (msg.senderName != CharacterName)
                     return;
 
                 if (msg.channel != ChatChannel.Local)
@@ -67,7 +64,7 @@ namespace MultiplayerARPG
                     {
                         if (CurrentGameInstance.EmoteData.GetBySlashCmdText(cmd, out EmoteAnimationData emoteAnimationData))
                         {
-                            StartCoroutine(PlayEmoteAnimation(emoteAnimationData));
+                               StartCoroutine(PlayEmoteAnimation(emoteAnimationData));
                         }
                     }
                 }
@@ -93,7 +90,7 @@ namespace MultiplayerARPG
                         CancelEmoteAnimations(false); //no need to overwrite animation if another action already did
                         yield break; //done
                     }
-                    else if (!IsDoingAction())//break from while, check for another animation or exit if done.
+                    else if (!IsDoingActionRG())//break from while, check for another animation or exit if done.
                     {
                         break; //next?
                     }
@@ -128,29 +125,30 @@ namespace MultiplayerARPG
 
         void RGEmotePlayerUpdate()
         {
+            //Only trigger press on client
+            if (!IsOwnerClient || !CurrentGameInstance.EnableRatherGoodEmotes)
+                return;
 
-            if (CurrentGameInstance.EnableRatherGoodEmotes)
+            if (CanDoActions())
             {
-                if (CanDoActions())
+                if (CurrentGameInstance.EmoteData.CheckInputManagerOnUpdate(out EmoteAnimationData emoteAnimationData))
                 {
-                    if (CurrentGameInstance.EmoteData.CheckInputManagerOnUpdate(out EmoteAnimationData emoteAnimationData))
-                    {
-                        string tempCmd = emoteAnimationData.slashCmdText;
-                        if (!tempCmd.StartsWith("/"))
-                            tempCmd = '/' + tempCmd;
+                    string tempCmd = emoteAnimationData.slashCmdText;
+                    if (!tempCmd.StartsWith("/"))
+                        tempCmd = '/' + tempCmd;
 
-                        GameInstance.ClientChatHandlers.SendChatMessage(new ChatMessage()
-                        {
-                            channel = ChatChannel.Local,
-                            message = tempCmd,
-                            sender = CharacterName,
-                            receiver = string.Empty, //TODO: Could also get player target for point
-                        });
-                    }
+                    GameInstance.ClientChatHandlers.SendChatMessage(new ChatMessage()
+                    {
+                        channel = ChatChannel.Local,
+                        message = tempCmd,
+                        senderName = CharacterName,
+                        receiverName = string.Empty, //TODO: Could also get player target for point
+                    });
                 }
             }
-
         }
+
+
 
     }
 

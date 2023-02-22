@@ -1,9 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using LiteNetLibManager;
-using LiteNetLib;
-using MultiplayerARPG.GameData.Model.Playables;
 
 namespace MultiplayerARPG
 {
@@ -19,7 +14,16 @@ namespace MultiplayerARPG
             if (!CurrentGameInstance.enableRatherGoodSheath)
                 return;
 
-            IsSheathed = GameInstance.Singleton.enableCharacterSelectSheath;
+            /*if (PlayerPrefs.GetInt("isSheathed") == 1)
+            {
+                IsSheathed = true;
+                Cursor.SetCursor(CurrentGameInstance.cursorPeaceMode, Vector2.zero, CursorMode.Auto);
+            }
+            else
+            {
+                IsSheathed = false;
+                Cursor.SetCursor(CurrentGameInstance.cursorBattleMode, Vector2.zero, CursorMode.Auto);
+            }*/
 
             onUpdate += PlayerSheathOnUpdate;
 
@@ -32,12 +36,15 @@ namespace MultiplayerARPG
 
         }
 
-        public override bool CanAttack()
+        /*public override bool CanUseItem()
         {
             if (isSheathed)
+            {
+                BaseGameNetworkManager.Singleton.SendNotifyCustomMessage(this.ConnectionId, "You cant do that while Sheathed", Color.red);
                 return false;
-            return base.CanAttack();
-        }
+            }
+            return base.CanUseItem();
+        }*/
 
         protected void PlayerSheathOnUpdate()
         {
@@ -46,24 +53,10 @@ namespace MultiplayerARPG
 
             if (InputManager.GetButtonDown(CurrentGameInstance.sheathButtonName))
             {
-                this.CallServerSheathWeapon(!IsSheathed);
+                IsWeaponsSheathed = !IsWeaponsSheathed;
             }
         }
-
-
-        protected override void OnEquipWeaponSetChange(bool isInitial, byte equipWeaponSet)
-        {
-
-            if (CurrentGameInstance.enableRatherGoodSheath)
-                StartCoroutine(WeaponSheathOrChangeProcess(isInitial, equipWeaponSet));
-            else
-                base.OnEquipWeaponSetChange(isInitial, equipWeaponSet);
-
-        }
-
     }
 }
-
-
 
 

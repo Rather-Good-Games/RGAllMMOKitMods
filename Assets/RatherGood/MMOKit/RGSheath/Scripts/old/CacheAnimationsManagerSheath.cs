@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-namespace MultiplayerARPG
+namespace MultiplayerARPG.OLD
 {
     public static class CacheAnimationsManagerSheath
     {

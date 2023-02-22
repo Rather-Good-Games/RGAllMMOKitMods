@@ -28,7 +28,6 @@ Transform:
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 1.5, z: 0}
   m_LocalScale: {x: 0.125, y: 3, z: 1.7}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 339634726983985476}
   m_RootOrder: 0
@@ -88,7 +87,6 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6450628296460689464}
   - {fileID: 336007125747330152}
@@ -126,7 +124,6 @@ Transform:
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 1, y: 1.5, z: 0}
   m_LocalScale: {x: 0.125, y: 3, z: 1.7}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 335692721619961440}
   m_RootOrder: 1
@@ -150,7 +147,6 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -247,9 +243,8 @@ GameObject:
   m_Component:
   - component: {fileID: 339634726983985476}
   - component: {fileID: 373424195012084388}
-  - component: {fileID: 373701510441637100}
+  - component: {fileID: 4098724890678943586}
   - component: {fileID: 426544240590633204}
-  - component: {fileID: 341824872838539718}
   - component: {fileID: 341824872838539717}
   m_Layer: 0
   m_Name: DoorEntityRG
@@ -268,7 +263,6 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5, y: 0, z: 6.5699997}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 339621511003156908}
   - {fileID: 3312297564268010489}
@@ -297,7 +291,7 @@ MonoBehaviour:
   onGetInstance:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &373701510441637100
+--- !u!114 &4098724890678943586
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -306,7 +300,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 341824872838539716}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 526fe6c536cb39146a968912f3bdb786, type: 3}
+  m_Script: {fileID: 11500000, guid: 3a323d4bd1bf58443b19aa0021cf9945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   behaviourIndex: 0
@@ -326,29 +320,14 @@ MonoBehaviour:
     deliveryMethod: 2
     clientDataChannel: 0
     clientDeliveryMethod: 1
-    value: Door
+    value: 
   ownerObjects: []
   nonOwnerObjects: []
   model: {fileID: 0}
   cameraTargetTransform: {fileID: 0}
   fpsCameraTargetTransform: {fileID: 0}
-  movementSecure: 0
   canSideSprint: 0
   canBackwardSprint: 0
-  passengingVehicle:
-    behaviour: {fileID: 0}
-    elementId: 0
-    alwaysSync: 0
-    doNotSyncInitialDataImmediately: 1
-    syncMode: 0
-    sendInterval: 0.1
-    dataChannel: 0
-    deliveryMethod: 2
-    clientDataChannel: 0
-    clientDeliveryMethod: 1
-    value:
-      objectId: 0
-      seatIndex: 0
   combatTextTransform: {fileID: 0}
   opponentAimTransform: {fileID: 0}
   isStaticHitBoxes: 0
@@ -384,28 +363,30 @@ MonoBehaviour:
     syncMode: 0
     sendInterval: 0.1
     dataChannel: 0
-    deliveryMethod: 0
+    deliveryMethod: 1
     clientDataChannel: 0
     clientDeliveryMethod: 1
-    value: 0
+    value: 100
   canBuildOnAnySurface: 0
   limitSurfaceHitNormalAngle: 0
   limitSurfaceHitNormalAngleMin: 80
   limitSurfaceHitNormalAngleMax: 100
   buildingType: 
-  buildingTypes:
-  - Door
+  buildingTypes: []
   buildDistance: 5
   destroyWhenParentDestroyed: 0
+  notBeingSelectedOnClick: 1
   maxHp: 100
   lifeTime: 0
   droppingItems: []
-  destroyDelay: 1
+  destroyDelay: 2
+  passwordContentType: 8
+  passwordLength: 6
   onBuildingDestroy:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 61907934615081879}
-        m_TargetAssemblyTypeName: 
+        m_TargetAssemblyTypeName: UtilsComponents.SimpleFadeStandardMaterial, Assembly-CSharp
         m_MethodName: FadeOut
         m_Mode: 1
         m_Arguments:
@@ -427,7 +408,7 @@ MonoBehaviour:
     syncMode: 0
     sendInterval: 0.1
     dataChannel: 0
-    deliveryMethod: 0
+    deliveryMethod: 1
     clientDataChannel: 0
     clientDeliveryMethod: 1
     value: 
@@ -439,7 +420,7 @@ MonoBehaviour:
     syncMode: 0
     sendInterval: 0.1
     dataChannel: 0
-    deliveryMethod: 0
+    deliveryMethod: 1
     clientDataChannel: 0
     clientDeliveryMethod: 1
     value: 
@@ -451,7 +432,7 @@ MonoBehaviour:
     syncMode: 0
     sendInterval: 0.1
     dataChannel: 0
-    deliveryMethod: 0
+    deliveryMethod: 1
     clientDataChannel: 0
     clientDeliveryMethod: 1
     value: 0
@@ -463,10 +444,10 @@ MonoBehaviour:
     syncMode: 0
     sendInterval: 0.1
     dataChannel: 0
-    deliveryMethod: 0
+    deliveryMethod: 1
     clientDataChannel: 0
     clientDeliveryMethod: 1
-    value: 1
+    value: 0
   creatorId:
     behaviour: {fileID: 0}
     elementId: 0
@@ -475,7 +456,7 @@ MonoBehaviour:
     syncMode: 0
     sendInterval: 0.1
     dataChannel: 0
-    deliveryMethod: 0
+    deliveryMethod: 1
     clientDataChannel: 0
     clientDeliveryMethod: 1
     value: 
@@ -487,7 +468,7 @@ MonoBehaviour:
     syncMode: 0
     sendInterval: 0.1
     dataChannel: 0
-    deliveryMethod: 0
+    deliveryMethod: 1
     clientDataChannel: 0
     clientDeliveryMethod: 1
     value: 
@@ -505,18 +486,6 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Opened
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 341824872838539718}
-        m_TargetAssemblyTypeName: MultiplayerARPG.DoorKeyLock, Assembly-CSharp
-        m_MethodName: PlayUnlock
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 340904864235138510}
@@ -558,18 +527,6 @@ MonoBehaviour:
           m_StringArgument: Closed
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 341824872838539718}
-        m_TargetAssemblyTypeName: MultiplayerARPG.DoorKeyLock, Assembly-CSharp
-        m_MethodName: PlayLock
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 340904864235138510}
         m_TargetAssemblyTypeName: 
         m_MethodName: SetActive
@@ -607,18 +564,6 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Open
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 341824872838539718}
-        m_TargetAssemblyTypeName: MultiplayerARPG.DoorKeyLock, Assembly-CSharp
-        m_MethodName: PlayOpen
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 340904864235138510}
@@ -660,18 +605,6 @@ MonoBehaviour:
           m_StringArgument: Close
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 341824872838539718}
-        m_TargetAssemblyTypeName: MultiplayerARPG.DoorKeyLock, Assembly-CSharp
-        m_MethodName: PlayClose
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
       - m_Target: {fileID: 340904864235138510}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -708,9 +641,14 @@ MonoBehaviour:
     clientDataChannel: 0
     clientDeliveryMethod: 1
     value: 0
+  key: {fileID: 11400000, guid: 34357ac203ec3e74bb0f5d6926dea419, type: 2}
+  clipUnlock: {fileID: 8300000, guid: 5ca04ca1cc1d7cd4d8176185746a43d4, type: 3}
+  clipLock: {fileID: 8300000, guid: de1ffd84dda3dcb47ab7b1dd7f0947f9, type: 3}
+  clipOpen: {fileID: 8300000, guid: 5ca04ca1cc1d7cd4d8176185746a43d4, type: 3}
+  clipClose: {fileID: 8300000, guid: de1ffd84dda3dcb47ab7b1dd7f0947f9, type: 3}
 --- !u!95 &426544240590633204
 Animator:
-  serializedVersion: 4
+  serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -723,28 +661,10 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &341824872838539718
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 341824872838539716}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50a2c1c8ce974024c9ae6aa41db6a96a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  key: {fileID: 11400000, guid: 34357ac203ec3e74bb0f5d6926dea419, type: 2}
-  clipUnlock: {fileID: 8300000, guid: 5ca04ca1cc1d7cd4d8176185746a43d4, type: 3}
-  clipLock: {fileID: 8300000, guid: de1ffd84dda3dcb47ab7b1dd7f0947f9, type: 3}
-  clipOpen: {fileID: 8300000, guid: 5ca04ca1cc1d7cd4d8176185746a43d4, type: 3}
-  clipClose: {fileID: 8300000, guid: de1ffd84dda3dcb47ab7b1dd7f0947f9, type: 3}
 --- !u!82 &341824872838539717
 AudioSource:
   m_ObjectHideFlags: 0
@@ -869,7 +789,6 @@ Transform:
   m_LocalRotation: {x: -0, y: 0.99998057, z: -0, w: -0.0062328232}
   m_LocalPosition: {x: -0.842, y: 1.5, z: -0.74}
   m_LocalScale: {x: 0.125, y: 3, z: 1.7}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 339634726983985476}
   m_RootOrder: 1
@@ -931,7 +850,6 @@ Transform:
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 1, y: 1.5, z: 0}
   m_LocalScale: {x: 0.125, y: 3, z: 1.7000002}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 335692721619961440}
   m_RootOrder: 0

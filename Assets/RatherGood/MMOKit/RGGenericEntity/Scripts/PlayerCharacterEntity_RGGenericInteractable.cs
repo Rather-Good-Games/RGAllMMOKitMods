@@ -39,14 +39,19 @@ namespace MultiplayerARPG
             if (GameInstance.PlayingCharacterEntity == null || (GameInstance.PlayingCharacterEntity != this))
                 return;
 
-            BaseGameEntity bge = BasePlayerCharacterController.Singleton.SelectedEntity;
+            ITargetableEntity ite = BasePlayerCharacterController.Singleton.SelectedEntity;
 
-            if ((bge != null) && (bge is InteractableEntityRG))
+            if ((ite != null))
             {
-                UISceneGameplay sgp = (UISceneGameplay)BaseUISceneGameplay.Singleton;
+                if (ite is InteractableEntityRG)
+                {
+                    UISceneGameplay sgp = (UISceneGameplay)BaseUISceneGameplay.Singleton;
 
-                sgp.uiTargetItemDrop.Data = bge;
-                sgp.uiTargetItemDrop.Show();
+                    sgp.uiTargetItemDrop.Data = (InteractableEntityRG)ite;
+                    sgp.uiTargetItemDrop.Show();
+
+                }
+
             }
         }
 

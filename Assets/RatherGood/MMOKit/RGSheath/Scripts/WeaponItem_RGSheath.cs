@@ -31,6 +31,16 @@ namespace MultiplayerARPG
             set { leftHandSheathEquipmentModels = value; }
         }
 
-
+        private bool alreadyMigrated = false;
+        public void MigrateRGSheathModels()
+        {
+            if (alreadyMigrated)
+                return;
+            alreadyMigrated = true;
+            if (RightHandSheathEquipmentModels != null && RightHandSheathEquipmentModels.Length > 0)
+                SheathModels = RightHandSheathEquipmentModels;
+            if (LeftHandSheathEquipmentModels != null && LeftHandSheathEquipmentModels.Length > 0)
+                OffHandSheathModels = LeftHandSheathEquipmentModels;
+        }
     }
 }

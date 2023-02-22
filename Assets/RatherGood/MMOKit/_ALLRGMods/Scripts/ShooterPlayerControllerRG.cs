@@ -1,39 +1,64 @@
+using Cysharp.Threading.Tasks;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace MultiplayerARPG
 {
-
-    //RGSheath mod leace combat mode when sheathed
-
-    public partial class ShooterPlayerControllerRG : ShooterPlayerCharacterController
+    public class ShooterPlayerControllerRG : ShooterPlayerCharacterController
     {
 
-        [Tooltip("RMB now activates block instead of secondary attack.")]
-        [SerializeField] bool isBlocking;
+        [Header("Rather Good Block")]
+        [Tooltip("Enable blocking with right mouse button press.")]
+        [SerializeField] bool enableRatherGoodBlock = false;
+
+        [SerializeField] bool isBlocking = false;
+
+
+        protected override void Setup(BasePlayerCharacterEntity characterEntity)
+        {
+            //save the value to not check on every update
+            enableRatherGoodBlock = GameInstance.Singleton.enableRatherGoodBlock;
+            base.Setup(characterEntity);
+        }
+
 
         protected override void Update()
         {
 
             if (CurrentGameInstance.switchControllerModeWhenSheathed && CurrentGameInstance.enableRatherGoodSheath)
             {
-                mode = (viewMode == ShooterControllerViewMode.Fps) ? ControllerMode.Combat : ((PlayerCharacterEntity.IsSheathed) ? ControllerMode.Adventure : ControllerMode.Combat);
+                mode = (viewMode == ShooterControllerViewMode.Fps) ? ControllerMode.Combat : (PlayingCharacterEntity.IsWeaponsSheathed ? ControllerMode.Adventure : ControllerMode.Combat);
             }
 
-            isBlocking = InputManager.GetButton("Fire2");
-
-            PlayerCharacterEntity.CallServerBlocking(!PlayerCharacterEntity.IsSheathed && isBlocking);
-
             base.Update();
+
+            //Blocking check
+            if (enableRatherGoodBlock)
+            {
+                bool shouldBlock = InputManager.GetButton("Fire2");
+
+                isBlocking = OwningCharacter.CallServerBlocking(!OwningCharacter.IsWeaponsSheathed && shouldBlock);
+            }
+
         }
 
-        /// <summary>
-        /// Override me for block instead of secondary attack.
-        /// </summary>
-        /// <returns></returns>
+        //Ignores RMB for attacks if block enabled
+        public override bool GetSecondaryAttackButtonUp()
+        {
+            return !enableRatherGoodBlock && InputManager.GetButtonUp("Fire2");
+        }
+
+
         public override bool GetSecondaryAttackButton()
         {
-            return false; // InputManager.GetButton("Fire2");
+            return !enableRatherGoodBlock && InputManager.GetButton("Fire2");
+        }
+
+
+        public override bool GetSecondaryAttackButtonDown()
+        {
+            return !enableRatherGoodBlock && InputManager.GetButtonDown("Fire2");
         }
 
 

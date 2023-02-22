@@ -37,7 +37,7 @@ namespace MultiplayerARPG
         }
 #endif
 
-        public override void ReceiveDamage(Vector3 fromPosition, EntityInfo instigator, Dictionary<DamageElement, MinMaxFloat> damageAmounts, CharacterItem weapon, BaseSkill skill, short skillLevel, int randomSeed)
+        public override void ReceiveDamage(Vector3 fromPosition, EntityInfo instigator, Dictionary<DamageElement, MinMaxFloat> damageAmounts, CharacterItem weapon, BaseSkill skill, int skillLevel, int randomSeed)
         {
             base.ReceiveDamage(fromPosition, instigator, damageAmounts, weapon, skill, skillLevel, randomSeed);
 

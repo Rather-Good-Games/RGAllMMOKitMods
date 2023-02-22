@@ -8,8 +8,6 @@ namespace MultiplayerARPG
 
         public string textToShow;
 
-        DoorEntity door;
-        DoorKeyLock doorLock;
         protected override void UpdateUI()
         {
 
@@ -18,32 +16,49 @@ namespace MultiplayerARPG
             if (!CacheCanvas.enabled)
                 return;
 
-            if (Data is DoorEntity)
+
+            textToShow = "";
+
+            if (Data is DoorEntityRG)
             {
                 if (uiTextTitle != null)
                 {
-                    door = (DoorEntity)Data;
+                    DoorEntityRG doorRG = (DoorEntityRG)Data;
 
-                    doorLock = door.GetComponent<DoorKeyLock>();
+                    textToShow = doorRG.Title;
 
-                    textToShow = door.Title;
+                    textToShow += (doorRG.IsLocked ? " (Locked)" : " (Unlocked)");
 
-                    textToShow += (door.IsLocked ? " (Locked)" : " (Unlocked)");
-
-                    if (doorLock != null)
+                    if (doorRG.key != null)
                     {
-                        textToShow += " - Requires: " + doorLock.key.Title;
+                        textToShow += " - Requires: " + doorRG.key.Title;
                     }
 
                     uiTextTitle.text = textToShow;
                 }
             }
-            else
-            {
-                door = null;
-                doorLock = null;
+     
 
+
+            if (Data is StorageEntityRG)
+            {
+                if (uiTextTitle != null)
+                {
+                    StorageEntityRG storageRG = (StorageEntityRG)Data;
+
+                    textToShow = storageRG.Title;
+
+                    textToShow += (storageRG.IsLocked ? " (Locked)" : " (Unlocked)");
+
+                    if (storageRG.key != null)
+                    {
+                        textToShow += " - Requires: " + storageRG.key.Title;
+                    }
+
+                    uiTextTitle.text = textToShow;
+                }
             }
+    
 
         }
 
@@ -54,20 +69,11 @@ namespace MultiplayerARPG
             if (!CacheCanvas.enabled)
                 return;
 
-            if (Data is DoorEntity && door != null && doorLock != null)
+            //Data is a DoorEntityRG or StorageEntityRG
+            if (!string.IsNullOrEmpty(textToShow))
             {
-                textToShow = door.Title;
-
-                textToShow += (door.IsLocked ? " (Locked)" : " (Unlocked)");
-
-                if (doorLock != null)
-                {
-                    textToShow += " - Requires: " + doorLock.key.Title;
-                }
-
                 uiTextTitle.text = textToShow;
             }
-
 
 
         }
